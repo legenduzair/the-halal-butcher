@@ -1,1 +1,0 @@
-web: gunicorn halal_butcher.wsgi
