@@ -1,11 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap');
 
+html {
+    height: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
-body {
-    /* font-family: 'Montserrat', sans-serif;
-    font-family: 'Open Sans', sans-serif; */
+/* font-family: 'Montserrat', sans-serif;
+ font-family: 'Open Sans', sans-serif; */
+
+ body {
+    height: calc(100vh - 164px);
+ }
+
+ .bg-light {
+    background-color: #f8f9fa!important;
+ }
+
+.main-banner {
+    background: url('/media/home/main-banner.jpg') no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+    max-width: 60vw;
+    margin-top: 160px;
+}
+
+.about-us-heading {
+    max-width: 42vw;
+    text-align: center;
+}
+
+.about-us-image {
+    background: url('/media/home/about-us-image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+    width: 20vw;
+}
+
+.subscribe-heading {
+    max-width: 68vw;
+    text-align: right;
+}
+
+.subscribe-image {
+    background: url('/media/home/subscribe-image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 50vh;
+    width: 20vw;
 }
