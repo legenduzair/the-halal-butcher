@@ -20,6 +20,10 @@ html {
     background-color: #f8f9fa!important;
  }
 
+ i, a {
+    color: #69140E !important;
+ }
+
 .main-banner {
     background: url('/media/home/main-banner.jpg') no-repeat center center;
     background-size: cover;
