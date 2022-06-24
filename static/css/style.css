@@ -47,6 +47,7 @@ html {
  .btn-warning {
     background-color: #D58936;
     color: #fefffe !important;
+    border: none;
  }
 .main-banner {
     background: url('/media/home/main-banner.jpg') no-repeat center center;
@@ -92,8 +93,75 @@ html {
 }
 
 .footer-image {
-    background: url(/media/home/footer-image.jpg) no-repeat center center;
+    background: url('/media/home/footer-image.jpg') no-repeat center center;
     background-size: cover;
     height: 100%;
     border-radius: 50%;
+}
+
+.header-container {
+    padding-top: 170px;
+}
+
+#auth-form {
+    padding-top: 8rem !important;
+}
+
+.login-form-image {
+    background: url('/media/auth/login-image.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.left-card {
+    background-color: rgba(105,20,14, 0.3);
+}
+
+.login-card {
+    border: none;
+}
+
+.auth-inner-styles p {
+    margin-top: 1.9rem;
+    font-weight: 750;
+}
+
+.auth-inner-styles a {
+    font-weight: 750;
+}
+
+.auth-inner-styles input {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#login-button {
+    margin-left: 1rem;
+}
+
+#signup-button {
+    margin-top: 1rem;
+}
+
+.auth-inner-styles button {
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+
+.auth-inner-styles input::placeholder {
+    color: #69140E;
+}
+
+.auth-inner-styles label:not([for='id_remember']) {
+    display: none;
+}
+
+#id_remember {
+    width: auto;
+}
+
+.auth-inner-styles button:hover,
+.auth-inner-styles input[type='submit']:hover {
+    color: #fefffe;
+    background-color: #69140E;
 }
