@@ -103,6 +103,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <a id="mobile-title" class="navbar-brand text-center" href="#">The Halal Butcher</a>
                 {% include 'includes/mobile-navbar.html' %}
                 {% include 'includes/main-nav.html' %}
             </nav>
@@ -210,7 +211,7 @@
         </div>
     </section>
 
-    {% block postloadjs %}
+    <!-- {% block postloadjs %}
     <script type="text/javascript">
         var windowSize = $(window).width();
         if(windowSize >= 320 &&windowSize < 992) {
@@ -219,7 +220,7 @@
             $('#base-nav').css('display','block');
         }
     </script>
-    {% endblock %}
+    {% endblock %} -->
 
     </body>
 </html>
