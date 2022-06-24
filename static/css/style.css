@@ -40,12 +40,20 @@ html {
     }
  }
 
+ #first-container {
+    margin-top: 6rem;
+ }
+
+ .btn-warning {
+    background-color: #D58936;
+    color: #fefffe !important;
+ }
 .main-banner {
     background: url('/media/home/main-banner.jpg') no-repeat center center;
     background-size: cover;
     height: 50vh;
     max-width: 60vw;
-    margin-top: 160px;
+    margin-top: 50px;
 }
 
 .about-us-heading {
