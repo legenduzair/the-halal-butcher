@@ -1,0 +1,92 @@
+[
+    {
+       "pk":1,
+       "model":"products.product",
+       "fields":{
+          "category":1,
+          "name":"Sirloin",
+          "sku":"001",
+          "description":"The popular Sirloin cut has a fine silky texture and rich marbling providing our sirloin steak a beautiful flavour and perfect tenderness.",
+          "additional_information":"Suitable for freezing, Weight: Approx 250-300g",
+          "price":10.00,
+          "rating":4.8,
+          "image_url":"https://images.unsplash.com/photo-1613454320437-0c228c8b1723?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+          "image":"sirloin-product.jpg"
+       }
+    },
+    {
+        "pk":2,
+        "model":"products.product",
+        "fields":{
+           "category":1,
+           "name":"Fillet",
+           "sku":"002",
+           "description":"The Fillet is known for being tender, luxurious with elegant and subtle flavours. It is lean yet it will melt in your mouth with its compact shape.",
+           "additional_information":"Suitable for freezing, Weight: Approx 200-250g",
+           "price":16.00,
+           "rating":4.5,
+           "image_url":"https://cdn.pixabay.com/photo/2016/03/05/22/07/beef-1239183_960_720.jpg",
+           "image":"fillet-product.jpg"
+        }
+     },
+     {
+        "pk":3,
+        "model":"products.product",
+        "fields":{
+           "category":1,
+           "name":"Rib Eye",
+           "sku":"003",
+           "description":"The Rib Eye steak is popular for its rich marbling and natural core of fat which runs through the meat, making it tender and juicy.",
+           "additional_information":"Suitable for freezing, Weight: Approx 230-280g",
+           "price":11.00,
+           "rating":4.3,
+           "image_url":"https://cdn.pixabay.com/photo/2021/07/21/17/50/beef-6483640_960_720.jpg",
+           "image":"ribeye-product.jpg"
+        }
+     },
+     {
+        "pk":4,
+        "model":"products.product",
+        "fields":{
+           "category":1,
+           "name":"Rump",
+           "sku":"004",
+           "description":"The Rump steak is marbled with fat on the outer layer, making it exceptionally flavourful.",
+           "additional_information":"Suitable for freezing, Weight: Approx 230-280g",
+           "price":9.00,
+           "rating":4.4,
+           "image_url":"https://cdn.pixabay.com/photo/2017/11/24/17/25/steak-2975323_960_720.jpg",
+           "image":"rump-product.jpg"
+        }
+     },
+     {
+        "pk":5,
+        "model":"products.product",
+        "fields":{
+           "category":1,
+           "name":"T-Bone",
+           "sku":"004",
+           "description":"The prime T-Bone steak is cut through and left on the bone to include both sirloin and fillet with maximum tenderness and flavour. This is one of the premium steaks and requires skill to prepare correctly.",
+           "additional_information":"Suitable for freezing, Weight: Approx 450-500g",
+           "price":20.00,
+           "rating":5.0,
+           "image_url":"https://images.unsplash.com/photo-1551028150-64b9f398f678?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+           "image":"tbone-product.jpg"
+        }
+     },
+     {
+        "pk":6,
+        "model":"products.product",
+        "fields":{
+           "category":1,
+           "name":"Tomahawk",
+           "sku":"005",
+           "description":"The Tomahawk cut is the king of steaks due to its large, tomahawk axe like appearance. With the bone separating two large juicy sections of meat, the Tomahawk is enough to feed multiple meat lovers.",
+           "additional_information":"Suitable for freezing, Weight: Approx 900g-1100g",
+           "price":35.00,
+           "rating":4.9,
+           "image_url":"https://images.unsplash.com/photo-1606677661991-446cea8ee182?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+           "image":"tomahawk-product.jpg"
+        }
+     },
+]
