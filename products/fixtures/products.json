@@ -65,7 +65,7 @@
         "fields":{
            "category":1,
            "name":"T-Bone",
-           "sku":"004",
+           "sku":"005",
            "description":"The prime T-Bone steak is cut through and left on the bone to include both sirloin and fillet with maximum tenderness and flavour. This is one of the premium steaks and requires skill to prepare correctly.",
            "additional_information":"Suitable for freezing, Weight: Approx 450-500g",
            "price":20.00,
@@ -80,7 +80,7 @@
         "fields":{
            "category":1,
            "name":"Tomahawk",
-           "sku":"005",
+           "sku":"006",
            "description":"The Tomahawk cut is the king of steaks due to its large, tomahawk axe like appearance. With the bone separating two large juicy sections of meat, the Tomahawk is enough to feed multiple meat lovers.",
            "additional_information":"Suitable for freezing, Weight: Approx 900g-1100g",
            "price":35.00,
@@ -89,4 +89,64 @@
            "image":"tomahawk-product.jpg"
         }
      },
+     {
+      "pk":7,
+      "model":"products.product",
+      "fields":{
+         "category":2,
+         "name":"Chicken Wings",
+         "sku":"007",
+         "description":"Everyone loves our chicken wings! They have become our customers prime choice as they can be cooked in a variety of ways from fried to grilled and marinated in different sauces & spices.",
+         "additional_information":"Suitable for freezing, Weight: Price per KG",
+         "price":5.99,
+         "rating":5.0,
+         "image_url":"https://images.unsplash.com/photo-1624153064067-566cae78993d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+         "image":"chickenwings-product.jpg"
+      }
+   },
+   {
+      "pk":8,
+      "model":"products.product",
+      "fields":{
+         "category":2,
+         "name":"Chicken Legs",
+         "sku":"008",
+         "description":"Not as popular as the chicken wings, but the chicken legs are also a staple among our customers. They can also be cooked and marinated in different ways to perfection for you and your family & friends to enjoy!",
+         "additional_information":"Suitable for freezing, Weight: Price per KG",
+         "price":5.99,
+         "rating":4.5,
+         "image_url":"https://images.unsplash.com/photo-1588767768106-1b20e51d9d68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+         "image":"chickenlegs-product.jpg"
+      }
+   },
+   {
+      "pk":9,
+      "model":"products.product",
+      "fields":{
+         "category":2,
+         "name":"Chicken Breast(Boneless)",
+         "sku":"009",
+         "description":"The chicken breast is the most special cut that most people want to purchase as it is filled with protein and low fat content. Aside from the nutritional benefits, chicken breasts are flavourful and have a capacity to absorb a variety of ingredients, Plus its boneless, so less hassle for the kids!",
+         "additional_information":"Suitable for freezing, Weight: Price per KG",
+         "price":8.99,
+         "rating":5.0,
+         "image_url":"https://images.unsplash.com/photo-1604503468506-a8da13d82791?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+         "image":"chickenbreast-product.jpg"
+      }
+   },
+   {
+      "pk":10,
+      "model":"products.product",
+      "fields":{
+         "category":2,
+         "name":"Whole Chicken",
+         "sku":"010",
+         "description":"The whole chicken is definitely for those who want to share their chicken with others. The option to have a chicken leg, chicken wings or even chicken breast all in one is a huge benefit to all. Unless, youre a bodybuilder who has high protein consumption of course!",
+         "additional_information":"Suitable for freezing, Weight: Price per KG",
+         "price":10.99,
+         "rating":4.1,
+         "image_url":"https://images.unsplash.com/photo-1594221708779-94832f4320d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+         "image":"wholechicken-product.jpg"
+      }
+   },
 ]
