@@ -30,5 +30,13 @@
             "name": "lamb",
             "friendly_name": "Lamb"
         }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "others",
+            "friendly_name": "Others"
+        }
     }
 ]
