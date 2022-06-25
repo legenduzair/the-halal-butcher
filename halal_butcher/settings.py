@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     # Custom Apps
     'home',
+    'products',
     # Other
     'crispy_forms',
     'django_summernote',
