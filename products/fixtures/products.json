@@ -25,7 +25,7 @@
            "additional_information":"Suitable for freezing, Weight: Approx 200-250g, Supplied raw.",
            "price":16.00,
            "rating":4.5,
-           "image_url":"https://cdn.pixabay.com/photo/2016/03/05/22/07/beef-1239183_960_720.jpg",
+           "image_url":"https://images.pexels.com/photos/6605641/pexels-photo-6605641.jpeg?cs=srgb&dl=pexels-geraud-pfeiffer-6605641.jpg&fm=jpg",
            "image":"fillet-product.jpg"
         }
      },
@@ -40,7 +40,7 @@
            "additional_information":"Suitable for freezing, Weight: Approx 230-280g, Supplied raw.",
            "price":11.00,
            "rating":4.3,
-           "image_url":"https://cdn.pixabay.com/photo/2021/07/21/17/50/beef-6483640_960_720.jpg",
+           "image_url":"https://images.pexels.com/photos/9541962/pexels-photo-9541962.jpeg?cs=srgb&dl=pexels-nadin-sh-9541962.jpg&fm=jpg",
            "image":"ribeye-product.jpg"
         }
      },
@@ -55,7 +55,7 @@
            "additional_information":"Suitable for freezing, Weight: Approx 230-280g, Supplied raw.",
            "price":9.00,
            "rating":4.4,
-           "image_url":"https://cdn.pixabay.com/photo/2017/11/24/17/25/steak-2975323_960_720.jpg",
+           "image_url":"https://images.pexels.com/photos/9843971/pexels-photo-9843971.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
            "image":"rump-product.jpg"
         }
      },
@@ -115,7 +115,7 @@
          "additional_information":"Suitable for freezing, Weight: Price per KG, Supplied raw.",
          "price":5.99,
          "rating":4.5,
-         "image_url":"https://images.unsplash.com/photo-1588767768106-1b20e51d9d68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+         "image_url":"https://cdn.pixabay.com/photo/2021/10/22/07/42/chicken-6731377_960_720.jpg",
          "image":"chickenlegs-product.jpg"
       }
    },
@@ -154,13 +154,13 @@
       "model":"products.product",
       "fields":{
          "meat_category":3,
-         "name":"Sheep T-Bone",
+         "name":"Sheep Mix",
          "sku":"011",
          "description":"Our sheep meat is derived from a domestic sheep aged 1 to 2 years of age. Having a distinctive taste and quality tenderness, it can be cooked to perfection in many different ways.",
-         "additional_information":"Suitable for freezing, Weight: Price per KG, Supplied raw.",
-         "price":12.99,
+         "additional_information":"Suitable for freezing, Weight: Price per Box, Supplied raw.",
+         "price":20.99,
          "rating":3.8,
-         "image_url":"https://cdn.pixabay.com/photo/2018/04/29/07/57/meat-3359248_960_720.jpg",
+         "image_url":"https://images.pexels.com/photos/6607314/pexels-photo-6607314.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
          "image":"sheep-product.jpg"
       }
    },
