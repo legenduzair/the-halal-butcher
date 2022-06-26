@@ -3,7 +3,7 @@
        "pk":1,
        "model":"products.product",
        "fields":{
-          "category":1,
+          "meat_category":1,
           "name":"Sirloin",
           "sku":"001",
           "description":"The popular Sirloin cut has a fine silky texture and rich marbling providing our sirloin steak a beautiful flavour and perfect tenderness.",
@@ -18,7 +18,7 @@
         "pk":2,
         "model":"products.product",
         "fields":{
-           "category":1,
+           "meat_category":1,
            "name":"Fillet",
            "sku":"002",
            "description":"The Fillet is known for being tender, luxurious with elegant and subtle flavours. It is lean yet it will melt in your mouth with its compact shape.",
@@ -33,7 +33,7 @@
         "pk":3,
         "model":"products.product",
         "fields":{
-           "category":1,
+           "meat_category":1,
            "name":"Rib Eye",
            "sku":"003",
            "description":"The Rib Eye steak is popular for its rich marbling and natural core of fat which runs through the meat, making it tender and juicy.",
@@ -48,7 +48,7 @@
         "pk":4,
         "model":"products.product",
         "fields":{
-           "category":1,
+           "meat_category":1,
            "name":"Rump",
            "sku":"004",
            "description":"The Rump steak is marbled with fat on the outer layer, making it exceptionally flavourful.",
@@ -63,7 +63,7 @@
         "pk":5,
         "model":"products.product",
         "fields":{
-           "category":1,
+           "meat_category":1,
            "name":"T-Bone",
            "sku":"005",
            "description":"The prime T-Bone steak is cut through and left on the bone to include both sirloin and fillet with maximum tenderness and flavour. This is one of the premium steaks and requires skill to prepare correctly.",
@@ -78,7 +78,7 @@
         "pk":6,
         "model":"products.product",
         "fields":{
-           "category":1,
+           "meat_category":1,
            "name":"Tomahawk",
            "sku":"006",
            "description":"The Tomahawk cut is the king of steaks due to its large, tomahawk axe like appearance. With the bone separating two large juicy sections of meat, the Tomahawk is enough to feed multiple meat lovers.",
@@ -93,7 +93,7 @@
       "pk":7,
       "model":"products.product",
       "fields":{
-         "category":2,
+         "meat_category":2,
          "name":"Chicken Wings",
          "sku":"007",
          "description":"Everyone loves our chicken wings! They have become our customers prime choice as they can be cooked in a variety of ways from fried to grilled and marinated in different sauces & spices.",
@@ -108,7 +108,7 @@
       "pk":8,
       "model":"products.product",
       "fields":{
-         "category":2,
+         "meat_category":2,
          "name":"Chicken Legs",
          "sku":"008",
          "description":"Not as popular as the chicken wings, but the chicken legs are also a staple among our customers. They can also be cooked and marinated in different ways to perfection for you and your family & friends to enjoy!",
@@ -123,7 +123,7 @@
       "pk":9,
       "model":"products.product",
       "fields":{
-         "category":2,
+         "meat_category":2,
          "name":"Chicken Breast(Boneless)",
          "sku":"009",
          "description":"The chicken breast is the most special cut that most people want to purchase as it is filled with protein and low fat content. Aside from the nutritional benefits, chicken breasts are flavourful and have a capacity to absorb a variety of ingredients, Plus its boneless, so less hassle for the kids!",
@@ -138,7 +138,7 @@
       "pk":10,
       "model":"products.product",
       "fields":{
-         "category":2,
+         "meat_category":2,
          "name":"Whole Chicken",
          "sku":"010",
          "description":"The whole chicken is definitely for those who want to share their chicken with others. The option to have a chicken leg, chicken wings or even chicken breast all in one is a huge benefit to all. Unless, youre a bodybuilder who has high protein consumption of course!",
@@ -153,7 +153,7 @@
       "pk":11,
       "model":"products.product",
       "fields":{
-         "category":3,
+         "meat_category":3,
          "name":"Sheep T-Bone",
          "sku":"011",
          "description":"Our sheep meat is derived from a domestic sheep aged 1 to 2 years of age. Having a distinctive taste and quality tenderness, it can be cooked to perfection in many different ways.",
@@ -168,7 +168,7 @@
       "pk":12,
       "model":"products.product",
       "fields":{
-         "category":4,
+         "meat_category":4,
          "name":"Lamb Chop",
          "sku":"012",
          "description":"Lamb chops are a staple in many different cuisines. They are scrumptious, tender and can be prepared in a variety of ways. Lamb chops possess a uniquely rich character that pairs well with different herbs & spices.",
@@ -183,7 +183,7 @@
       "pk":13,
       "model":"products.product",
       "fields":{
-         "category":4,
+         "meat_category":4,
          "name":"Leg of Lamb",
          "sku":"013",
          "description":"The leg of lamb is a British favourite with an abundance of lean and succulent meat ideal for a perfect Sunday roast with your family.",
@@ -198,7 +198,7 @@
       "pk":14,
       "model":"products.product",
       "fields":{
-         "category":5,
+         "meat_category":5,
          "name":"Sushi Platter (New In)",
          "sku":"014",
          "description":"Introducing our new product - the Sushi Platter. Yes, The Halal Butcher is now providing customers with sushi boxes to take home or on the go! More sushi platters will come in the future.",
@@ -213,7 +213,7 @@
       "pk":15,
       "model":"products.product",
       "fields":{
-         "category":5,
+         "meat_category":5,
          "name":"Beef Burger Patties",
          "sku":"015",
          "description":"These beef burger patties are perfect for BBQ's and assembling quick burgers for lunch/dinner as the meat is already compressed. Ready to be marinated in your choice of herbs & spices and cooked to perfection.",
