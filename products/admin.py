@@ -1,14 +1,14 @@
 from django.contrib import admin
 from .models import Product, Category
-from django_summernote.admin import SummernoteModelAdmin
 
 
-class ProductAdmin(SummernoteModelAdmin):
-    summernote_fields = ('description', 'additional_information',)
+class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
         'name',
         'meat_category',
+        'description',
+        'additional_information',
         'price',
         'rating',
         'image',
