@@ -18,17 +18,17 @@
                 <hr class="w-50 m-auto">
             </div>
         </div>
-        <div class="row">
+        <div class="row bg-light p-4">
             {% for product in products %}
             <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card h-100 border-0">
                     {% if product.image %}
                     <a href="{% url 'product_detail' product.id %}">
-                        <img class="card-img-top rounded-2" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        <img class="border border-dark card-img-top rounded-2" src="{{ product.image.url }}" alt="{{ product.name }}">
                     </a>
                     {% else %}
                     <a href="{% url 'product_detail' product.id %}">
-                        <img class="card-img-top rounded-2" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        <img class="border border-dark card-img-top rounded-2" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                     </a>
                     {% endif %}
                     <div class="card-body pb-0">
