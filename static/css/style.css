@@ -165,3 +165,11 @@ html {
     color: #fefffe;
     background-color: #69140E;
 }
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: block;
+  }

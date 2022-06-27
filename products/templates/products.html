@@ -101,11 +101,19 @@
             {% endfor %}
         </div>
     </div>
-
+    <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </section>
 {% endblock %}
 
 {% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		$('#btn-back-to-top').click(function(e) {
+			window.scrollTo(0,0)
+		});
+	</script>
     <script type="text/javascript">
         $('#sort-selector').change(function() {
             let selector = $(this);
