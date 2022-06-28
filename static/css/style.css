@@ -192,3 +192,7 @@ html {
     cursor: pointer;
     display: block;
 }
+
+.img-fluid {
+    width: 75% !important;
+}
