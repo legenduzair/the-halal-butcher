@@ -196,3 +196,26 @@ html {
 .img-fluid {
     width: 75% !important;
 }
+
+.checkout-button {
+    background-color: #69140E;
+    color: #fefffe !important;
+}
+
+.checkout-button:hover,
+.checkout-button:active,
+.checkout-button:focus {
+    background-color: #D58936;
+}
+
+
+.input-group button {
+    background-color: #69140E;
+    border: 1px solid black;
+}
+
+.input-group button:hover,
+.input-group button:active,
+.input-group button:focus {
+    background-color: #D58936;
+}
