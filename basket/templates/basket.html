@@ -10,4 +10,29 @@
 {% endblock %}
 
 {% block content %}
+<section>
+    <div class="container col-11">
+        <div class="row">
+            <div class="col text-center mt-5 mb-3 pt-3">
+                <h2>Shopping Basket</h2>
+                <hr class="w-50 m-auto">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% if basket_items %}
+                    <div class="table-responsive rounded"></div>
+                {% else %}
+                    <p class="lead my-5">Your shopping bag is currently empty.</p>
+                    <a href="{% url 'products' %}" class="btn">
+                        <span>
+                            <i class="fa fa-chevron-left"></i>
+                        </span>
+                        <span>Keep Shopping</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
