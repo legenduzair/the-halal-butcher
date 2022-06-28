@@ -219,3 +219,14 @@ html {
 .input-group button:focus {
     background-color: #D58936;
 }
+
+.fa-minus,
+.fa-plus {
+    color: #fefffe !important;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
