@@ -193,6 +193,10 @@ html {
     display: block;
 }
 
+#btn-back-to-top i {
+    color: #fefffe !important;
+}
+
 .img-fluid {
     width: 75% !important;
 }
