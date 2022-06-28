@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     # Custom Apps
     'home',
     'products',
+    'basket',
     # Other
     'crispy_forms',
     'django_summernote',
