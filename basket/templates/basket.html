@@ -21,7 +21,9 @@
         <div class="row">
             <div class="col">
                 {% if basket_items %}
-                    <div class="table-responsive rounded"></div>
+                    <div class="table-responsive rounded">
+                        {{ basket_items }}
+                    </div>
                 {% else %}
                     <p class="lead my-5">Your shopping bag is currently empty.</p>
                     <a href="{% url 'products' %}" class="btn">
