@@ -261,3 +261,9 @@ html {
     background: none;
     padding-left: 0.5rem;
 }
+
+.heart-button-two {
+    border: none;
+    background: none;
+    padding-top: 1rem;
+}

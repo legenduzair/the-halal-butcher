@@ -42,6 +42,20 @@
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
+                    {% if user.is_authenticated %}
+                    <form class="form" action="{% url 'add_to_wishlist' product.id %}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="heart-button-two" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+                            <i class="fas fa-heart fa-lg"></i>
+                            <strong><small> Add This Product To Your Wishlist!</small></strong>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </button></p>
+                    </form>
+                    {% else %}
+                    <a href="{% url 'account_login' %}"  class="btn" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+                        <i class="fas fa-heart fa-lg"></i>
+                    </a></p>
+                    {% endif %}
                     <p class="mt-3">{{ product.description }}</p>
                     <p class="font-weight-bold mt-3">{{ product.additional_information }}</p>
                     <form action="{% url 'add_to_basket' product.id %}" method="POST" class="form">
