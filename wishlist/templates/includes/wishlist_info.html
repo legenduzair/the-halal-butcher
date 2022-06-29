@@ -1,2 +1,9 @@
-<p class="my-0"><strong>{{ wish.name }} - {{ wish.meat_category }}</strong></p>
+<p class="my-0"><strong>{{ wish.name }} - {{ wish.meat_category.friendly_name }}</strong></p>
 <p class="my-0 small text-muted">SKU: {{ wish.sku|upper }}</p>
+{% if wish.rating %}
+<small class="text-muted"><i class="fas fa-star mr-1"></i>{{ wish.rating }} / 5</small>
+{% else %}
+<small class="text-muted">No Rating</small>
+{% endif %}
+<p class="my-0 pt-4"><strong>{{ wish.description }}</strong></p>
+<p class="my-0 small text-muted">SKU: {{ wish.additional_information }}</p>
