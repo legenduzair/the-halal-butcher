@@ -46,7 +46,7 @@
                                     <p class="my-0">£{{ wish.price }}</p>
                                 </td>
                                 <td class="py-3 w-10 pl-4">
-                                    <a class="btn btn-outline-warning" href="">Remove</a>
+                                    <a class="btn btn-outline-warning" href="{% url 'remove_from_wishlist' wish.id %}">Remove</a>
                                 </td>
                             </tr>
                         {% endfor %}
