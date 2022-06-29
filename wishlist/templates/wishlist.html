@@ -10,4 +10,63 @@
 {% endblock %}
 
 {% block content %}
+<section class="bg-light pb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center mt-5 mb-3 pt-3">
+                <h2>My Wishlist &#9829;</h2>
+                <hr class="w-50 m-auto">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% if wishlist.products.all %}
+                <div class="table-responsive rounded">
+                    <table class="table table-sm table-borderless">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product Info</th>
+                                <th scope="col"></th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                        </thead>
+
+                        {% for wish in wishlist.products.all %}
+                        <tr>
+                            <td class="p-3 w-25">
+                                {% include "includes/wishlist_image.html" %}
+                            </td>
+                            <td class="py-3">
+                                {% include "includes/wishlist_info.html" %}
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">£{{ wish.price }}</p>
+                            </td>
+                            <td class="py-3 w-10">
+                                <a class="btn btn-outline-warning" href="">Remove</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    <tr>
+                        <td class="text-right" colspan="5">
+                            {% include 'includes/wishlist_buttons.html' %}
+                        </td>
+                    </tr>
+                    </table>
+                </div>
+                {% else %}
+                <p class="lead my-5">Your wishlist is currently empty.</p>
+                    <a href="{% url 'products' %}" class="btn btn-outline-warning rounded-0 btn-lg">
+                        <span>
+                            <i class="fa fa-chevron-left text-white"></i>
+                        </span>
+                        <span>Keep Browsing</span>
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

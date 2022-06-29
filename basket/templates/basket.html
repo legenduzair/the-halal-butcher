@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block content %}
-<section>
+<section class="bg-light pb-3">
     <div class="container col-11">
         <div class="row">
             <div class="col text-center mt-5 mb-3 pt-3">
@@ -66,7 +66,7 @@
                         </table>
                     </div>
                 {% else %}
-                    <p class="lead my-5">Your shopping bag is currently empty.</p>
+                    <p class="lead my-5">Your shopping basket is currently empty.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-warning rounded-0 btn-lg">
                         <span>
                             <i class="fa fa-chevron-left text-white"></i>
