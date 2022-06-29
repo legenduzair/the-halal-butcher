@@ -255,3 +255,9 @@ html {
 .toast-capper {
     height: 5px;
 }
+
+.heart-button {
+    border: none;
+    background: none;
+    padding-left: 0.5rem;
+}
