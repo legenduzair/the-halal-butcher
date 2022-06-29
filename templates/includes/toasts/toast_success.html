@@ -16,7 +16,7 @@
         </div>
         {% if grand_total %}
             <p class="logo-font bg-white text-black py-1">Your Basket ({{ product_count }})</p>
-            <div class="bag-notification-wrapper">
+            <div class="basket-notification-wrapper">
                 {% for item in basket_items %}
                     <div class="row">
                         <div class="col-3 my-1">
@@ -44,7 +44,7 @@
                             Spend <strong>£{{ free_delivery_delta }}</strong> more to get free next day delivery!
                         </p>
                     {% endif %}
-                    <a href="{% url 'view_bag' %}" class="btn btn-black btn-block rounded-0">
+                    <a href="{% url 'view_basket' %}" class="btn btn-outline-warning btn-block rounded-0">
                         <span class="text-uppercase">Secure Checkout</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>

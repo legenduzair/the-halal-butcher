@@ -234,3 +234,24 @@ html {
 .remove-item {
     cursor: pointer;
 }
+.basket-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.message-container {
+    position: fixed;
+    top: 60px;
+    right: 5px;
+    z-index: 99999;
+    /* max-width: max(25%, 280px); */
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 5px;
+}
