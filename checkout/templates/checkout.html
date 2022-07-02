@@ -38,7 +38,7 @@
                     <div class="row">
                         <div class="col-2 mb-1">
                             <a href="{% url 'product_detail' item.product.id %}">
-                                {% if item.product.primary_image %}
+                                {% if item.product.image %}
                                     <img src="{{ item.product.image.url }}" alt="{{ product.name }}" class="w-100">
                                 {% else %}
                                     <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="w-100">
@@ -50,7 +50,7 @@
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -81,7 +81,7 @@
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
                         {{ order_form.phone_number | as_crispy_field }}
-                        {{ order_form.street_address_1 | as_crispy_field }}
+                        {{ order_form.street_address | as_crispy_field }}
                         {{ order_form.town_or_city | as_crispy_field }}
                         {{ order_form.county | as_crispy_field }}
                         {{ order_form.postcode | as_crispy_field }}
@@ -114,7 +114,7 @@
                                 </span>
                                 <span class="font-weight-bold">Adjust Basket</span>
                             </a>
-                            <button class="btn btn-warning rounded-0 mb-1" id="submit-button">
+                            <button class="btn checkout-button rounded-0 mb-1" id="submit-button">
                                 <span class="font-weight-bold">Complete Order</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
@@ -124,7 +124,7 @@
                                 <span class="icon text-danger">
                                     <i class="fas fa-exclamation-circle"></i>
                                 </span>
-                                <span>Your card will be charged <strong>€{{ grand_total|floatformat:2 }}</strong></span>
+                                <span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
                             </p>
                     </div>
                 </form>
