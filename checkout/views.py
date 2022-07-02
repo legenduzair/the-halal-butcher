@@ -1,8 +1,8 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 
-from .forms import OrderForm
+from .forms import Order, OrderForm
 from checkout.models import OrderLineItem
 from products.models import Product
 from basket.contexts import basket_contents
@@ -84,3 +84,22 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
+
+def checkout_success(request, order_number):
+
+    save_info = request.session.get('save_info')
+    order = get_object_or_404(Order, order_number=order_number)
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}')
+    
+    if 'bag' in request.session:
+        del request.session['bag']
+
+    template = 'checkout_success.html'
+    context = {
+        'order': order,
+    }
+    return render(request, template, context)
+
