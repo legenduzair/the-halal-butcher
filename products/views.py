@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
@@ -68,6 +69,7 @@ def product_detail(request, product_id):
     return render(request, 'product_detail.html', context)
 
 
+@login_required
 def add_product(request):
 
     if request.method == 'POST':
@@ -88,6 +90,7 @@ def add_product(request):
     return render(request, 'add_product.html', context)
 
 
+@login_required
 def edit_product(request, product_id):
    
     if not request.user.is_superuser:
@@ -116,6 +119,7 @@ def edit_product(request, product_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_product(request, product_id):
   
     if not request.user.is_superuser:
