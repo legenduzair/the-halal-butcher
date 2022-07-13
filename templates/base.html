@@ -78,7 +78,7 @@
                             <div class="dropdown-menu border-0" aria-labelledby="user-options1">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
-                                        <a href="" class="dropdown-item">Product Management</a>
+                                        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                                     {% endif %}
                                     <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                     <a href="{% url 'wishlist' %}" class="dropdown-item">My Wishlist</a>
@@ -191,7 +191,7 @@
                 <a href="{% url 'wishlist' %}" class="text-reset">Your Wishlist</a>
               </p>
               <p>
-                <a href="" class="text-reset">Account</a>
+                <a href="{% url 'profile' %}" class="text-reset">Account</a>
               </p>
               <p>
                 <a href="" class="text-reset">Visit Our Facebook Page</a>
