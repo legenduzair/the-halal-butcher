@@ -12,4 +12,4 @@ class ProductForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
-        self.fields['category'].choices = friendly_names
+        self.fields['meat_category'].choices = friendly_names

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<section class="bg-light pb-3">
+    <div class="container col-11">
+        <div class="row">
+            <div class="col-12 col-md-6 mt-5 mb-3 pt-3">
+                <h2>Product Management</h2>
+                <h5 class="text-muted">Add a Product</h5>
+                <hr class="w-50 m-auto">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="text-right">
+                        <a class="btn btn-outline-warning rounded-0" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn checkout-button rounded-0" type="submit">Add Product</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
