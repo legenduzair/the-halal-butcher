@@ -115,6 +115,7 @@
                     <div class="card">
                         {% if review.user == request.user or request.user.is_superuser %}
                             <div class="card-head">
+                                <a href="{% url 'delete_review' review.id %}" class="btn btn-black btn-sm text-bold float-right mt-2"><span>Remove</span></a>
                                 <a href="" data-toggle="modal" data-target="#modal1-{{review.id}}" class="btn btn-warning btn-sm text-bold float-right m-2"><span>Edit</span></a>
                             </div>
                         {% endif %}
@@ -139,7 +140,7 @@
                                     <fieldset class="rounded px-3 mb-5">
                                         {{ form | crispy }}
                                     </fieldset>
-                                    <button class="btn btn-warning rounded-0 text-uppercase float-right mb-3" type="submit">Post</button>
+                                    <button class="btn btn-warning rounded-0 text-uppercase float-right mb-3" type="submit">Update</button>
                                 </form>
                             </div>
                           </div>
