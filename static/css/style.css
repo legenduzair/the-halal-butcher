@@ -88,6 +88,10 @@ html {
     width: 20vw;
 }
 
+.order-process p {
+    text-align: center;
+}
+
 .subscribe-heading {
     max-width: 68vw;
     text-align: right;
