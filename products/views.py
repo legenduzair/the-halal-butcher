@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
+from .models import Product, Category, ProductReview
 from .forms import ProductForm, ReviewForm
 # Create your views here.
 
@@ -61,9 +61,13 @@ def product_list(request):
 def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
+    form = ReviewForm
+    reviews = product.reviews.filter()
 
     context = {
         'product': product,
+        'form': form,
+        'reviews': reviews,
     }
 
     return render(request, 'product_detail.html', context)
@@ -138,6 +142,15 @@ def delete_product(request, product_id):
     }
 
     return render(request, template, context)
+
+
+def render_reviews(request):
+    """ A view to render all reviews """
+    reviews = ProductReview.objects.all()
+    form = ReviewForm()
+
+    context = {'reviews': reviews, 'review_form': form}
+    return render(request, 'product_detail.html', context)
 
 
 @login_required
