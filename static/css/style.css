@@ -92,6 +92,12 @@ html {
     text-align: center;
 }
 
+.card-img-top-custom {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+}
+
 .subscribe-heading {
     max-width: 68vw;
     text-align: right;
