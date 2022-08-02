@@ -25,7 +25,7 @@
             <div class="col-12 col-md-10 col-xl-8 col-xxl-6 mx-auto">
                 {% if posts %}
                     {% for post in posts %}
-                        <div class="card d-flex mt-4 flex-column flex-sm-row bg-one gap">
+                        <div class="card d-flex mt-4 flex-column flex-sm-row bg-one gap p-3 pt-4">
                             <div class="card-body d-flex flex-row">
                                 {% if post.image %}
                                 <img src="{{ post.image.url }}" alt="{{ post.title }}" class="blog-card-image">
@@ -41,6 +41,8 @@
                             </div>
                         </div>
                     {% endfor %}
+                    {% else %}
+                    <p>Hmm...It seems like there are no blog posts at the moment. Please check back later!</p>
                 {% endif %}
             </div>
         </div>
