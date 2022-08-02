@@ -12,19 +12,22 @@
 {% block content %}
 <section>
     <div class="container col-11 mt-5">
-        <div class="row">
-            <div class="col-md-8 card mb-4 mt-3 left top">
-                <div class="card-body">
+        <div class="row d-flex flex-column">
+            <div class="col-10 mx-auto d-flex">
                     {% if post.image %}
-                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="blog-card-image">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="mx-auto blog-card-image">
                     {% else %}
-                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="blog-card-image">
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="mx-auto blog-card-image">
                     {% endif %}
-                    <h1>{{ post.title }}</h1>
-                    <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
-                    <p class="card-text ">{{ post.content | safe }}</p>
-                </div>
-              </div>
+            </div>
+            <div class="col-10 mx-auto card card-body">
+                <h1>{{ post.title }}</h1>
+                <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="card-text ">{{ post.content | safe }}</p>
+                <aside class="align-self-end">
+                    <a href="{% url 'blog_list'  %}" class="btn btn-outline-warning">Back to Blogs</a>
+                </aside>
+            </div>    
         </div>
     </div>
 </section>

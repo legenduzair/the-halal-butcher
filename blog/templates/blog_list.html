@@ -36,9 +36,11 @@
                                     <h2 class="card-title">{{ post.title }}</h2>
                                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
                                     <p class="card-text">{{ post.content|slice:":200"|safe }}</p>
-                                    <a href="{% url 'blog_detail' post.slug  %}" class="btn btn-outline-warning">Read More &rarr;</a>
                                 </div>
                             </div>
+                            <aside class="align-self-end">
+                                <a href="{% url 'blog_detail' post.slug  %}" class="btn btn-outline-warning">Read More &rarr;</a>
+                            </aside>
                         </div>
                     {% endfor %}
                     {% else %}
@@ -46,6 +48,7 @@
                 {% endif %}
             </div>
         </div>
+        <hr class="mt-5">
     </div>
 </section>
 {% endblock %}
