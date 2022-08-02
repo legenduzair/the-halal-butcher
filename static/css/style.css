@@ -283,3 +283,17 @@ html {
 .blog-card-image {
     max-width: min(100%, 485px);
 }
+
+.blog-card-image-two {
+    max-width: min(100%, 700px);
+}
+
+.blog-list-container {
+    gap: 1rem;
+}
+
+.read-more {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
