@@ -297,3 +297,11 @@ html {
     bottom: 10px;
     right: 20px;
 }
+
+/* Mailchimp CSS*/
+
+#mc_embed_signup{
+    clear:left; 
+    font:14px Helvetica,Arial,sans-serif;  
+    width:600px;
+  }
