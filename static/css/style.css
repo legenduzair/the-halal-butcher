@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap');
 
+/* General CSS Styles */
 html {
     height: 100%;
 }
@@ -8,9 +9,6 @@ html {
     margin: 0;
     padding: 0;
 }
-
-/* font-family: 'Montserrat', sans-serif;
- font-family: 'Open Sans', sans-serif; */
 
  body {
     height: calc(100vh - 164px);
@@ -24,6 +22,32 @@ html {
  i, a {
     color: #69140E !important;
  }
+
+ .btn-warning {
+    background-color: #D58936;
+    color: #fefffe !important;
+    border: none;
+ }
+ 
+ .btn-outline-warning {
+    background-color: #D58936;
+    color: #fefffe !important;
+    border: 1px solid black;
+ }
+ 
+ .btn-outline-warning:hover,
+ .btn-outline-warning:active,
+ .btn-outline-warning:focus {
+    color: #fefffe !important;
+    background-color: #69140E;
+    border: 1px solid black;
+ }
+ 
+ .icon > i {
+    color: #fefffe !important;
+ }
+
+ /* Navbar Styles */
 
  @media (max-width: 991px) {
     #base-nav {
@@ -46,7 +70,7 @@ html {
     }
  }
 
- /* Home Page */
+ /* Home Page Styles */
 
 @media (max-width: 991px) {
     #jumbotron {
@@ -69,30 +93,6 @@ html {
  #first-container {
     margin-top: 6rem;
  }
-
- .btn-warning {
-    background-color: #D58936;
-    color: #fefffe !important;
-    border: none;
- }
-
- .btn-outline-warning {
-    background-color: #D58936;
-    color: #fefffe !important;
-    border: 1px solid black;
-}
-
-.btn-outline-warning:hover,
-.btn-outline-warning:active,
-.btn-outline-warning:focus {
-    color: #fefffe !important;
-    background-color: #69140E;
-    border: 1px solid black;
-}
-
-.icon > i {
-    color: #fefffe !important;
-}
 
 .main-banner {
     background: url('/media/home/main-banner.jpg') no-repeat center center;
@@ -271,12 +271,16 @@ html {
     margin: 0 auto;
 }
 
+/* Footer Styles */
+
 .footer-image {
     background: url('/media/home/footer-image.jpg') no-repeat center center;
     background-size: cover;
     height: 100%;
     border-radius: 50%;
 }
+
+/* Authentication Forms Styles */
 
 .header-container {
     padding-top: 100px;
@@ -345,6 +349,8 @@ html {
     background-color: #69140E;
 }
 
+/* Back to Top Button */
+
 #btn-back-to-top {
     position: fixed;
     bottom: 20px;
@@ -357,8 +363,39 @@ html {
     color: #fefffe !important;
 }
 
+/* Wishlist Styles */
 .img-fluid {
-    width: 75% !important;
+    width: 100% !important;
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: inherit;
+    }
+}
+
+@media (max-width: 650px) {
+    #wishlist-desc {
+        font-size: 0.8rem;
+    }
+    #wishlist-additional {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    #wishlist-row {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+    }
+    #wishlist-image {
+        align-self: center;
+        width: 50% !important;
+    }
+    #wishlist-browsing {
+        text-align: center !important;
+    }
 }
 
 .checkout-button {

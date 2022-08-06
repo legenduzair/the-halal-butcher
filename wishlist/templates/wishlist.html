@@ -35,8 +35,8 @@
                             </thead>
 
                             {% for wish in wishlist.products.all %}
-                            <tr>
-                                <td class="p-3 w-25">
+                            <tr id="wishlist-row">
+                                <td id="wishlist-image" class="p-3 w-25">
                                     {% include "includes/wishlist_image.html" %}
                                 </td>
                                 <td class="py-3">
@@ -51,7 +51,7 @@
                             </tr>
                         {% endfor %}
                         <tr>
-                            <td class="text-right" colspan="5">
+                            <td id="wishlist-browsing" class="text-right" colspan="5">
                                 {% include 'includes/wishlist_buttons.html' %}
                             </td>
                         </tr>
