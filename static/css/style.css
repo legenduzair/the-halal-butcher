@@ -363,6 +363,42 @@ html {
     color: #fefffe !important;
 }
 
+/* Products Styles */
+
+.img-list {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.img-detail {
+    width: 100%;
+    height: 35vw;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+@media (max-width: 991px) {
+    .img-detail {
+        height: 55vw;
+    }
+}
+
+@media (max-width: 991px) {
+    .img-list {
+        height: 40vw;
+    }
+}
+
+@media (max-width: 575px) {
+    .img-list {
+        height: 85vw;
+    }
+}
+
 /* Wishlist Styles */
 .img-fluid {
     width: 100% !important;
