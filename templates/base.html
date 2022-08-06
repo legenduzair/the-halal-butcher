@@ -39,21 +39,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
-    <!-- Mailchimp JS -->
-    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-    <script type='text/javascript'>
-      (function($) {
-        window.fnames = new Array(); 
-        window.ftypes = new Array();
-        fnames[0]='EMAIL';ftypes[0]='email';
-        fnames[1]='FNAME';ftypes[1]='text';
-        fnames[2]='LNAME';ftypes[2]='text';
-        fnames[3]='ADDRESS';ftypes[3]='address';
-        fnames[4]='PHONE';ftypes[4]='phone';
-        fnames[5]='BIRTHDAY';ftypes[5]='birthday';
-      }(jQuery));
-      var $mcj = jQuery.noConflict(true);
-    </script>
     {% endblock %}
 
     {% block extra_js %}
@@ -61,204 +46,227 @@
     
     <title>The Halal Butcher {% block extra_title %}{% endblock %}</title>
     </head>
+    
     <body>
-
-    <!-- Navbar -->
-    <header class="fixed-top">
-        <nav id="base-nav" class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                    <a class="navbar-brand" href="{% url 'home' %}">The Halal Butcher</a>
-                </div>
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                    <form method="GET" action="{% url 'products' %}">
-                        <div class="input-group w-100">
-                            <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our meats">
-                            <div class="input-group-append">
-                                <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                    <span class="icon">
-                                        <i class="fas fa-search"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                        <li class="list-inline-item pr-4"><a href="{% url 'wishlist' %}"><i class="text-center fas fa-heart fa-beat fa-lg"></i></a></li>
-                        <li class="list-inline-item dropdown">
-                            <a class="text-black nav-link" href="#" id="user-options1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div class="text-center">
-                                    <div class="pr-2"><i class="fas fa-user-circle"></i></div>   
-                                </div>
-                            </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options1">
-                                {% if request.user.is_authenticated %}
-                                    {% if request.user.is_superuser %}
-                                        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                    {% endif %}
-                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                    <a href="{% url 'wishlist' %}" class="dropdown-item">My Wishlist</a>
-                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                {% else %}
-                                      <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                      <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                                {% endif %}
-                            </div>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="nav-link" href="{% url 'view_basket' %}">
-                                <div class="text-center">
-                                    <div class="pr-4"><i class="fas fa-shopping-basket"></i></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-          </nav>
-          <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a id="mobile-title" class="navbar-brand text-center" href="{% url 'home' %}">The Halal Butcher</a>
-                {% include 'includes/mobile-navbar.html' %}
-                {% include 'includes/main-nav.html' %}
+      <!-- Navbar -->
+      <header class="fixed-top">
+          <nav id="base-nav" class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+                  <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                      <a class="navbar-brand" href="{% url 'home' %}">The Halal Butcher</a>
+                  </div>
+                  <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                      <form method="GET" action="{% url 'products' %}">
+                          <div class="input-group w-100">
+                              <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our meats">
+                              <div class="input-group-append">
+                                  <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                      <span class="icon">
+                                          <i class="fas fa-search"></i>
+                                      </span>
+                                  </button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                      <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                          <li class="list-inline-item pr-4"><a href="{% url 'wishlist' %}"><i class="text-center fas fa-heart fa-beat fa-lg"></i></a></li>
+                          <li class="list-inline-item dropdown">
+                              <a class="text-black nav-link" href="#" id="user-options1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <div class="text-center">
+                                      <div class="pr-2"><i class="fas fa-user-circle"></i></div>   
+                                  </div>
+                              </a>
+                              <div class="dropdown-menu border-0" aria-labelledby="user-options1">
+                                  {% if request.user.is_authenticated %}
+                                      {% if request.user.is_superuser %}
+                                          <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                      {% endif %}
+                                      <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                      <a href="{% url 'wishlist' %}" class="dropdown-item">My Wishlist</a>
+                                      <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                  {% else %}
+                                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                  {% endif %}
+                              </div>
+                          </li>
+                          <li class="list-inline-item">
+                              <a class="nav-link" href="{% url 'view_basket' %}">
+                                  <div class="text-center">
+                                      <div class="pr-4"><i class="fas fa-shopping-basket"></i></div>
+                                  </div>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
             </nav>
-        </div>
-    </header>
+            <div class="row bg-white">
+              <nav class="navbar navbar-expand-lg navbar-light w-100">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <a id="mobile-title" class="navbar-brand text-center" href="{% url 'home' %}">The Halal Butcher</a>
+                  {% include 'includes/mobile-navbar.html' %}
+                  {% include 'includes/main-nav.html' %}
+              </nav>
+          </div>
+      </header>
+      
+      {% if messages %}
+          <div class="message-container">
+              {% for message in messages %}
+                  {% with message.level as level %}
+                      {% if level == 40 %}
+                          {% include 'includes/toasts/toast_error.html' %}
+                      {% elif level == 30 %}
+                          {% include 'includes/toasts/toast_warning.html' %}
+                      {% elif level == 25 %}
+                          {% include 'includes/toasts/toast_success.html' %}
+                      {% else %}
+                          {% include 'includes/toasts/toast_info.html' %}
+                      {% endif %}
+                  {% endwith %}
+              {% endfor %}
+          </div>
+      {% endif %}
 
-    {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
-    {% endif %}
+      {% block page_header %}
+      {% endblock %}
 
-        {% block page_header %}
-        {% endblock %}
+      {% block content %}
+      {% endblock content %}
 
-        {% block content %}
-        {% endblock content %}
-
-    <!-- Footer -->
-    <section class="">
-        <div class="container text-center text-md-start mt-5">
-          <div class="row mt-3">
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-5">
-              <h6 class="text-uppercase fw-bold mb-4">
-                The Halal Butcher
-              </h6>
-              <p>
-                We <span class="pr-2"><i>MEAT</i> The Highest Standards.
-              </p>
-              <div class="image-container">
-                <div class="footer-image"></div>
+      <!-- Footer -->
+      <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-5">
+                <h6 class="text-uppercase fw-bold mb-4">
+                  The Halal Butcher
+                </h6>
+                <p>
+                  We <span class="pr-2"><i>MEAT</i> The Highest Standards.
+                </p>
+                <div class="image-container">
+                  <div class="footer-image"></div>
+                </div>
+              </div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-5">
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Our Special Meats
+                </h6>
+                <p>
+                  <a href="{% url 'products' %}?category=beef" class="text-reset">Beef</a>
+                </p>
+                <p>
+                  <a href="{% url 'products' %}?category=chicken" class="text-reset">Chicken</a>
+                </p>
+                <p>
+                  <a href="{% url 'products' %}?category=sheep" class="text-reset">Sheep</a>
+                </p>
+                <p>
+                  <a href="{% url 'products' %}?category=lamb" class="text-reset">Lamb</a>
+                </p>
+                <p>
+                  <a href="{% url 'products' %}?category=others" class="text-reset">Others</a>
+                </p>
+                <p>
+                  <a href="{% url 'products' %}?category=beef,chicken,sheep,lamb,others" class="text-reset">All Categories</a>
+                </p>
+              </div>
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-5">
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Links
+                </h6>
+                <p>
+                  <a href="{% url 'products' %}" class="text-reset">Our Meats</a>
+                </p>
+                <p>
+                  <a href="{% url 'blog_list' %}" class="text-reset">The Meat Blog.</a>
+                </p>
+                <p>
+                  <a href="{% url 'view_basket' %}" class="text-reset">View Shopping Basket</a>
+                </p>
+                <p>
+                  <a href="{% url 'wishlist' %}" class="text-reset">Your Wishlist</a>
+                </p>
+                <p>
+                  <a href="{% url 'profile' %}" class="text-reset">Account</a>
+                </p>
+                <p>
+                  <a href="https://www.facebook.com/The-Halal-Butcher-102810515870368/" class="text-reset">Visit Our Facebook Page</a>
+                </p>
               </div>
             </div>
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-5">
-              <h6 class="text-uppercase fw-bold mb-4">
-                Our Special Meats
-              </h6>
-              <p>
-                <a href="{% url 'products' %}?category=beef" class="text-reset">Beef</a>
-              </p>
-              <p>
-                <a href="{% url 'products' %}?category=chicken" class="text-reset">Chicken</a>
-              </p>
-              <p>
-                <a href="{% url 'products' %}?category=sheep" class="text-reset">Sheep</a>
-              </p>
-              <p>
-                <a href="{% url 'products' %}?category=lamb" class="text-reset">Lamb</a>
-              </p>
-              <p>
-                <a href="{% url 'products' %}?category=others" class="text-reset">Others</a>
-              </p>
-              <p>
-                <a href="{% url 'products' %}?category=beef,chicken,sheep,lamb,others" class="text-reset">All Categories</a>
-              </p>
-            </div>
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-5">
-              <h6 class="text-uppercase fw-bold mb-4">
-                Links
-              </h6>
-              <p>
-                <a href="{% url 'products' %}" class="text-reset">Our Meats</a>
-              </p>
-              <p>
-                <a href="{% url 'blog_list' %}" class="text-reset">The Meat Blog.</a>
-              </p>
-              <p>
-                <a href="{% url 'view_basket' %}" class="text-reset">View Shopping Basket</a>
-              </p>
-              <p>
-                <a href="{% url 'wishlist' %}" class="text-reset">Your Wishlist</a>
-              </p>
-              <p>
-                <a href="{% url 'profile' %}" class="text-reset">Account</a>
-              </p>
-              <p>
-                <a href="https://www.facebook.com/The-Halal-Butcher-102810515870368/" class="text-reset">Visit Our Facebook Page</a>
-              </p>
-            </div>
           </div>
-        </div>
-    </section>
-    <section class="page-footer font-small pt-4 bg-light">
-        <div class="container">
-            <!-- Social Media Links -->
-            <ul class="list-unstyled list-inline text-center">
-                <li class="list-inline-item">
-                    <a class="mx-1" href="https://www.facebook.com/The-Halal-Butcher-102810515870368/" target="_blank" aria-label="link to facebook website">
-                        <i class="fab fa-facebook-f fa-lg"> </i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="mx-1" href="https://www.twitter.com" target="_blank" aria-label="link to twitter website" rel="noopener">
-                        <i class="fab fa-twitter fa-lg"> </i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="mx-1" href="https://www.instagram.com" target="_blank" aria-label="link to instagram website" rel="noopener">
-                        <i class="fab fa-instagram fa-lg"> </i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="mx-1" href="https://www.linkedin.com" target="_blank" aria-label="link to linkedin website" rel="noopener">
-                        <i class="fab fa-linkedin-in fa-lg"> </i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="mx-1" href="https://www.github.com" target="_blank" aria-label="link to github website" rel="noopener">
-                        <i class="fab fa-github fa-lg"> </i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <!-- Copyright Information -->
-        <div class="text-center py-3">
-            © 2022 Copyright: The Halal Butcher
-        </div>
-    </section>
+      </section>
+      <section class="page-footer font-small pt-4 bg-light">
+          <div class="container">
+              <!-- Social Media Links -->
+              <ul class="list-unstyled list-inline text-center">
+                  <li class="list-inline-item">
+                      <a class="mx-1" href="https://www.facebook.com/The-Halal-Butcher-102810515870368/" target="_blank" aria-label="link to facebook website">
+                          <i class="fab fa-facebook-f fa-lg"> </i>
+                      </a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a class="mx-1" href="https://www.twitter.com" target="_blank" aria-label="link to twitter website" rel="noopener">
+                          <i class="fab fa-twitter fa-lg"> </i>
+                      </a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a class="mx-1" href="https://www.instagram.com" target="_blank" aria-label="link to instagram website" rel="noopener">
+                          <i class="fab fa-instagram fa-lg"> </i>
+                      </a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a class="mx-1" href="https://www.linkedin.com" target="_blank" aria-label="link to linkedin website" rel="noopener">
+                          <i class="fab fa-linkedin-in fa-lg"> </i>
+                      </a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a class="mx-1" href="https://www.github.com" target="_blank" aria-label="link to github website" rel="noopener">
+                          <i class="fab fa-github fa-lg"> </i>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <!-- Copyright Information -->
+          <div class="text-center py-3">
+              © 2022 Copyright: The Halal Butcher
+          </div>
+      </section>
 
-    {% block postloadjs %}
-    <script type="text/javascript">
-      $('.toast').toast('show');
-    </script>
-    {% endblock %}
+      {% block postloadjs %}
+      <script type="text/javascript">
+        $('.toast').toast('show');
+      </script>
+      {% endblock %}
+      {% block mailchimpjs %}
+      <!-- Mailchimp JS -->
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+      <script type='text/javascript'>
+        (function($) {
+          window.fnames = new Array(); 
+          window.ftypes = new Array();
+          fnames[0]='EMAIL';
+          ftypes[0]='email';
+          fnames[1]='FNAME';
+          ftypes[1]='text';
+          fnames[2]='LNAME';
+          ftypes[2]='text';
+          fnames[3]='ADDRESS';
+          ftypes[3]='address';
+          fnames[4]='PHONE';
+          ftypes[4]='phone';
+          fnames[5]='BIRTHDAY';
+          ftypes[5]='birthday';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+      </script>
+      {% endblock %}
     </body>
 </html>

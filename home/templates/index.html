@@ -6,7 +6,7 @@
     <div id="first-container" class="container-fluid px-5 pb-5 pt-5">
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-6">
-                <div class="text-center my-5">
+                <div id="jumbotron" class="text-center my-5">
                     <h1>We <span class="pr-2"><i>MEAT</i></span> The Highest Standards.</h1>
                     <p class="pt-4 lead">Calling all meat lovers! Have a browse through our delicious fresh meats of all types.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-warning border border-dark mt-3 pl-4 pr-4 pt-3 pb-3">SHOP NOW</a>
@@ -19,7 +19,7 @@
 <section>
     <div class="container-fluid bg-light px-5 pb-5">
         <div class="row">
-            <div class="col-7 m-auto">
+            <div class="col-10 col-sm-9 m-auto">
                 <div class="main-banner border border-dark"></div>
             </div>
         </div>
@@ -31,32 +31,32 @@
         <div class="my-5 text-center">
             <h2>Our Order Process</h2>
         </div>
-        <div class="row gx-5 justify-content-center">
-            <div class="col-2">
+        <div id="order-container" class="row gx-5 justify-content-center">
+            <div class="order-column col-2">
                 <div class="order-process d-flex flex-column align-items-center">
                     <img src="/media/home/meat-vector.jpg" alt="cartoon image of meat" width="100px">
                     <p>Choose your selection of meats</p>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="order-column col-2">
                 <div class="order-process d-flex flex-column align-items-center">
                     <img src="/media/home/basket-vector.jpg" alt="cartoon image of shopping basket" width="100px">
                     <p>Add to shopping basket</p>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="order-column col-2">
                 <div class="order-process d-flex flex-column align-items-center">
                     <img src="/media/home/checkout-vector.jpg" alt="cartoon image of payment cards" width="100px">
                     <p>Proceed to checkout</p>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="order-column col-2">
                 <div class="order-process d-flex flex-column align-items-center">
                     <img src="/media/home/details-vector.jpg" alt="cartoon image of checklist" width="100px">
                     <p>Fill in personal & payment details</p>
                 </div>
             </div>
-            <div class="col-2">
+            <div class="order-column col-2">
                 <div class="order-process d-flex flex-column align-items-center">
                     <img src="/media/home/waiting-vector.jpg" alt="cartoon image of person with clock" width="100px">
                     <p>Wait for your scrumptious meats to arrive!</p>
@@ -71,8 +71,8 @@
         <div class="my-5 text-center">
             <h2>Our Butcher's Most Popular Cuts!</h2>
         </div>
-        <div class="row gx-5 justify-content-between">
-            <div class="col-3">
+        <div id="cuts-container" class="row gx-5 justify-content-between">
+            <div class="popular-cuts col-3">
                 <div class="card mb-3">
                     <h3 class="card-header text-center">T-Bone</h3>
                     <div class="card-body">
@@ -84,7 +84,7 @@
                     </div>
                   </div>
             </div>
-            <div class="col-3">
+            <div class="popular-cuts col-3">
                 <div class="card mb-3">
                     <h3 class="card-header text-center">Tomahawk</h3>
                     <div class="card-body">
@@ -96,7 +96,7 @@
                     </div>
                   </div>
             </div>
-            <div class="col-3">
+            <div class="popular-cuts col-3">
                 <div class="card mb-3">
                     <h3 class="card-header text-center">Lamb Chop</h3>
                     <div class="card-body">
@@ -118,8 +118,8 @@
         <div class="my-5 about-us-heading">
             <h2>About Us...</h2>
         </div>
-        <div class="row gx-5 justify-content-center">
-            <div class="col-3">
+        <div id="about-container" class="row gx-5 justify-content-center">
+            <div class="about-us-col col-3">
                 <div class="about-us-info">
                     <h4>Calling All Meat Lovers!</h4>
                     <p class="pt-4">The Halal Butcher was initiated in May 2022 with the sole purpose of supplying our meat-loving audience with the very
@@ -137,7 +137,7 @@
                     <p><i>Our product is 100% halal and our livestock is slaughtered unstunned fulfilling all sharia requirements.</i></p>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="about-us-col col-3">
                 <div class="about-us-image ml-5 border border-dark">
                 </div>
             </div>
@@ -150,12 +150,12 @@
         <div class="my-5 subscribe-heading">
             <h2>Subscribe To Our Newsletter!</h2>
         </div>
-        <div class="row gx-5 justify-content-center">
-            <div class="col-3">
+        <div id="subscribe-container" class="row gx-5 justify-content-center">
+            <div class="subscribe-col col-3">
                 <div class="subscribe-image border border-dark">
                 </div>
             </div>
-            <div class="col-3">
+            <div class="subscribe-col col-3">
                 <!-- Begin Mailchimp Signup Form -->
                 <div class="mt-5" id="mc_embed_signup">
                     <form action="https://live.us9.list-manage.com/subscribe/post?u=70c78682b3eac1a56230676c4&amp;id=df89063137&amp;f_id=00c604e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
