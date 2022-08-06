@@ -54,3 +54,9 @@
     margin: 0;
     height: 100%;
 }
+
+@media (max-width: 345px){
+    #order-number {
+        font-size: 0.8rem;
+    }
+}
