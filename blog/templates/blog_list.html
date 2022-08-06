@@ -22,17 +22,17 @@
             <h3 class="mb-4">Latest Blog Entries</h3>
         </div>
         <div class="row">
-            <div class="col-12 col-md-10 col-xl-8 col-xxl-6 mx-auto">
+            <div class="col col-xl-10 mx-auto">
                 {% if posts %}
                     {% for post in posts %}
-                        <div class="card d-flex mt-4 flex-column flex-sm-row bg-one p-3 pt-4">
+                        <div id="blog-card" class="card d-flex mt-4 flex-column flex-sm-row bg-one p-3 pt-4">
                             <div class="blog-list-container card-body d-flex flex-row">
                                 {% if post.image %}
                                 <img src="{{ post.image.url }}" alt="{{ post.title }}" class="blog-card-image">
                                 {% else %}
                                 <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="blog-card-image">
                                 {% endif %}
-                                <div>
+                                <div id="blog-desc">
                                     <h2 class="card-title">{{ post.title }}</h2>
                                     <p class="card-text text-muted h6">{{ post.created_on}} </p>
                                     <p class="pt-3 card-text">{{ post.content|slice:":450"|safe }}</p>
