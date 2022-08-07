@@ -404,6 +404,12 @@ html {
     width: 100% !important;
 }
 
+@media (max-width: 600px) {
+    #wishlist-price {
+        display: none;
+    }
+}
+
 @media (max-width: 767px) {
     .container {
         max-width: inherit;
@@ -433,6 +439,32 @@ html {
         text-align: center !important;
     }
 }
+
+/* Basket Styles */
+
+.basket-image {
+    width: 87% !important;
+}
+
+
+@media (max-width: 768px) {
+    #quantity-mobile form {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .basket-image {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 439px) {
+    #checkout-buttons-mobile a:first-child {
+        margin-bottom: 1rem;
+    }
+}
+/* Checkout Styles */
 
 .checkout-button {
     background-color: #69140E;

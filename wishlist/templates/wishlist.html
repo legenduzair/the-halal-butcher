@@ -28,7 +28,7 @@
                                 <tr>
                                     <th scope="col">Product Info</th>
                                     <th scope="col"></th>
-                                    <th scope="col">Price</th>
+                                    <th id="wishlist-price" scope="col">Price</th>
                                     <th scope="col"></th>
                                     <th scope="col"></th>
                                 </tr>
@@ -36,7 +36,7 @@
 
                             {% for wish in wishlist.products.all %}
                             <tr id="wishlist-row">
-                                <td id="wishlist-image" class="p-3 w-25">
+                                <td id="wishlist-image" class="w-25">
                                     {% include "includes/wishlist_image.html" %}
                                 </td>
                                 <td class="py-3">
