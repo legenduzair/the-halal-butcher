@@ -18,7 +18,11 @@
     <div class="container col-11">
         <div class="row">
             <div class="col text-center mt-5 mb-3 pt-3">
+                {% if profile.display_name %}
                 <h2>Welcome To Your Profile, <span class="display-name">{{ profile.display_name }}</span></h2>
+                {% else %}
+                <h2>Welcome To Your Profile!</h2>
+                {% endif %}
                 <hr class="w-50 m-auto">
             </div>
         </div>

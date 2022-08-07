@@ -56,6 +56,9 @@ html {
     #mobile-title {
         margin-left: 90px;
     }
+    .dropdown-menu {
+        left: -40px;
+    }
  }
 
  @media (max-width: 517px) {
