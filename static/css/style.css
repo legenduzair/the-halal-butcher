@@ -297,7 +297,7 @@ html {
 }
 
 .login-form-image {
-    background: url('/media/auth/login-image.jpg') no-repeat center center;
+    background: url('/media/login-image.jpg') no-repeat center center;
     background-size: cover;
 }
 
