@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /basket/
+Disallow: /admin/
+Disallow: /profiles/
+Sitemap: https://halal-butcher.herokuapp.com/sitemap.xml
