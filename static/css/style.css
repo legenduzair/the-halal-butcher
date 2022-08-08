@@ -104,7 +104,6 @@ html {
     background: url('/media/main-banner.jpg') no-repeat center center;
     background-size: cover;
     height: 50vh;
-    max-width: 60vw;
     margin-top: 50px;
 }
 
