@@ -101,7 +101,7 @@ html {
  }
 
 .main-banner {
-    background: url('/media/home/main-banner.jpg') no-repeat center center;
+    background: url('/media/main-banner.jpg') no-repeat center center;
     background-size: cover;
     height: 50vh;
     max-width: 60vw;
@@ -238,7 +238,7 @@ html {
 }
 
 .about-us-image {
-    background: url('/media/home/about-us-image.jpg') no-repeat center center;
+    background: url('/media/about-us-image.jpg') no-repeat center center;
     background-size: cover;
     height: 50vh;
     width: 20vw;
@@ -260,7 +260,7 @@ html {
 }
 
 .subscribe-image {
-    background: url('/media/home/subscribe-image.jpg') no-repeat center center;
+    background: url('/media/subscribe-image.jpg') no-repeat center center;
     background-size: cover;
     height: 50vh;
     width: 20vw;
@@ -280,7 +280,7 @@ html {
 /* Footer Styles */
 
 .footer-image {
-    background: url('/media/home/footer-image.jpg') no-repeat center center;
+    background: url('/media/footer-image.jpg') no-repeat center center;
     background-size: cover;
     height: 100%;
     border-radius: 50%;
