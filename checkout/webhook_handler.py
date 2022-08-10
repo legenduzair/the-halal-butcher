@@ -77,7 +77,7 @@ class StripeWH_Handler:
                 order = Order.objects.get(
                     first_name__iexact=shipping_details.name,
                     last_name__iexact=shipping_details.name,
-                    email__iexact=billing_details.email,
+                    email__iexact=shipping_details.email,
                     phone_number__iexact=shipping_details.phone,
                     country__iexact=shipping_details.address.country,
                     postcode__iexact=shipping_details.address.postal_code,
@@ -106,7 +106,7 @@ class StripeWH_Handler:
                     first_name=shipping_details.name,
                     last_name=shipping_details.name,
                     user_profile=profile,
-                    email=billing_details.email,
+                    email=shipping_details.email,
                     phone_number=shipping_details.phone,
                     country=shipping_details.address.country,
                     postcode=shipping_details.address.postal_code,
