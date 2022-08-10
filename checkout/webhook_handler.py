@@ -66,7 +66,7 @@ class StripeWH_Handler:
                 profile.town_or_city = shipping_details.address.city
                 profile.street_address = shipping_details.address.line1
                 profile.county = shipping_details.address.state
-                profile.email_address = shipping_details.email
+                profile.email_address = billing_details.email
                 profile.save()
 
 
@@ -77,7 +77,7 @@ class StripeWH_Handler:
                 order = Order.objects.get(
                     first_name__iexact=shipping_details.name,
                     last_name__iexact=shipping_details.name,
-                    email__iexact=shipping_details.email,
+                    email__iexact=billing_details.email,
                     phone_number__iexact=shipping_details.phone,
                     country__iexact=shipping_details.address.country,
                     postcode__iexact=shipping_details.address.postal_code,
@@ -106,7 +106,7 @@ class StripeWH_Handler:
                     first_name=shipping_details.name,
                     last_name=shipping_details.name,
                     user_profile=profile,
-                    email=shipping_details.email,
+                    email=billing_details.email,
                     phone_number=shipping_details.phone,
                     country=shipping_details.address.country,
                     postcode=shipping_details.address.postal_code,
