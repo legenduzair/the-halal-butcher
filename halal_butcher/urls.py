@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import handler404, handler403, handler400 
+from .views import handler404, handler500, handler403, handler400 
 
 urlpatterns = [
     path('accounts/', include('allauth.urls')),
@@ -33,6 +33,6 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'halal_butcher.views.handler404'
-# handler500 = 'halal_butcher.views.handler500'
+handler500 = 'halal_butcher.views.handler500'
 handler403 = 'halal_butcher.views.handler403'
 handler400 = 'halal_butcher.views.handler400'
