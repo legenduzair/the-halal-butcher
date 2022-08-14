@@ -36,6 +36,7 @@ This website application includes CRUD functionality, user authentication (using
 
 As this project utilises Django which is a MVT(Model, View & Template) framework, a connection to database tables or 'Models' is required. An entity relationship diagram was created to visually map out the structure of the databases & models. The entity relationship diagram was creating using [DrawSQL](https://drawsql.app/) and is shown below:
 
+![screenshot of ERD on DrawSQL](https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/Screenshot%202022-08-14%20at%2017.57.09.png)
 
 ### The Structure Plane
 
