@@ -220,6 +220,15 @@ As this project utilises Django which is a MVT(Model, View & Template) framework
 
 ![screenshot of ERD on DrawSQL](/readme/screenshots/Screenshot%202022-08-14%20at%2017.57.09.png)
 
+#### User Stories - Acceptance Criterias'
+
+As part of the Strategy Plane, I also incorporated Acceptance Criterias' within each User Story, to help plan and structure the development of my project and be more organised about the whole workflow & process.
+
+<details>
+    <summary></summary>      
+        
+</details>
+
 ### The Skeleton Plane
 
 ### The Surface Plane
