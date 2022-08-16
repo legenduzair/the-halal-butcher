@@ -553,17 +553,17 @@ As part of the Strategy Plane, I also incorporated Acceptance Criterias' within 
 
 Before initiating the project, I planned the general layout and structure of the main content for each page of the website across various screen sizes; desktop, tablet and mobile. The wireframes below were designed using Balsamiq Wireframes:
 
-- (Home Page(Desktop))[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/homepage-wf-ss.png]
-- (Home Page(Tablet & Mobile))[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/homepage-wf-ss-mob.png]
-- (Authentication Pages)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/auth-wf-ss.png]
-- (Product List Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/productlist-wf-ss.png]
-- (Product Detail Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/productdetail-wf-ss.png]
-- (User Profile Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/profile-wf-ss.png]
-- (Product Management Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/prodmanage-wf-ss.png]
-- (Shopping Basket Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/trolley-wf-ss.png]
-- (Wishlist Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/wishlist-wf-ss.png]
-- (Checkout Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/checkout-wf-ss.png]
-- (Order Confirmation Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/order-confirm-wf-ss.png]
+- [Home Page(Desktop)](https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/homepage-wf-ss.png)
+- [Home Page(Tablet & Mobile)](https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/homepage-wf-ss-mob.png)
+- [Authentication Pages](https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/auth-wf-ss.png)
+- [Product List Page](https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/productlist-wf-ss.png)
+- [Product Detail Page](https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/productdetail-wf-ss.png)
+- [User Profile Page](https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/profile-wf-ss.png)
+- [Product Management Page](https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/prodmanage-wf-ss.png)
+- [Shopping Basket Page](https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/trolley-wf-ss.png)
+- [Wishlist Page](https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/wishlist-wf-ss.png)
+- [Checkout Page](https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/checkout-wf-ss.png)
+- [Order Confirmation Page](https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/order-confirm-wf-ss.png)
 
 ### The Surface Plane
 #### Colour Scheme
