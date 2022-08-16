@@ -218,7 +218,7 @@ Below are the User Stories that were completed within the project's first releas
 
 As this project utilises Django which is a MVT(Model, View & Template) framework, a connection to database tables or 'Models' is required. An entity relationship diagram was created to visually map out the structure of the databases & models. The entity relationship diagram was creating using [DrawSQL](https://drawsql.app/) and is shown below:
 
-![screenshot of ERD on DrawSQL](/readme/screenshots/Screenshot%202022-08-14%20at%2017.57.09.png)
+![screenshot of ERD on DrawSQL](/readme/screenshots/erd.png)
 
 #### User Stories - Acceptance Criterias'
 
@@ -547,7 +547,13 @@ As part of the Strategy Plane, I also incorporated Acceptance Criterias' within 
        2. Given that I am a store owner when I confirm deletion of a blog entry via the modal then the corresponding blog entry will be removed from the list of blog entries.
 </details>
 <br>
+
 ### The Skeleton Plane
+#### Wireframes
+
+Before initiating the project, I planned the general layout and structure of the main content for each page of the website across various screen sizes; desktop, tablet and mobile. The wireframes below were designed using Balsamiq Wireframes:
+
+- (Home Page(Desktop))[]
 
 ### The Surface Plane
 
