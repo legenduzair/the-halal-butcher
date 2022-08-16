@@ -553,20 +553,106 @@ As part of the Strategy Plane, I also incorporated Acceptance Criterias' within 
 
 Before initiating the project, I planned the general layout and structure of the main content for each page of the website across various screen sizes; desktop, tablet and mobile. The wireframes below were designed using Balsamiq Wireframes:
 
-- (Home Page(Desktop))[]
+- (Home Page(Desktop))[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/homepage-wf-ss.png]
+- (Home Page(Tablet & Mobile))[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/homepage-wf-ss-mob.png]
+- (Authentication Pages)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/auth-wf-ss.png]
+- (Product List Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/productlist-wf-ss.png]
+- (Product Detail Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/productdetail-wf-ss.png]
+- (User Profile Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/profile-wf-ss.png]
+- (Product Management Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/prodmanage-wf-ss.png]
+- (Shopping Basket Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/trolley-wf-ss.png]
+- (Wishlist Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/wishlist-wf-ss.png]
+- (Checkout Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/checkout-wf-ss.png]
+- (Order Confirmation Page)[https://github.com/legenduzair/the-halal-butcher/blob/main/readme/screenshots/order-confirm-wf-ss.png]
 
 ### The Surface Plane
+#### Colour Scheme
+
+After completing the layout of the wireframes to create a skeleton for the project, I selected the colour scheme by generating a colour palette on Coolors. The colours from the palette were used as they had high level of colour contrast to maximise user accessibility. The colour palette is shown below.
+
+![colour scheme of project](/readme/screenshots/color-scheme.png)
+
+#### Typography
+
+When designing the website, I had carefully chosen two complimentary fonts; 'News Cycle' that is the primary font used throughout the Bootstrap theme: [Bootswatch Journal](https://bootswatch.com/journal/) and 'OpenSans' from Google Fonts. It is important that the text on the website is clear & easy for users to read and is not too unappealing to the human eye. The letters are spaced out correctly and the style of the font fits the scheme of the website; Meat Butcher Store.
+
+#### Images
+
+All images used for developing the website were acquired from [Pexels](https://www.pexels.com/), [Unsplash](https://unsplash.com/images/stock/royalty-free) and [Vecteezy](https://www.vecteezy.com/free-photos). These images were uploaded into my S3 bucket on [AWS](https://aws.amazon.com/).
 
 ## Features
 
 ## Future Improvements
 
+There are several improvements to functionality that I would like to implement in the future. Some of these improvements have been gathered from the user stories on the project Kanban board [here](https://github.com/legenduzair/the-halal-butcher/projects/2). These user stories have not been completed and would be implemented as future enhancement opportunities. These include:
+
+- The ability to recover a user's password if it has been stolen/forgotten/corrupted. This functionality is part of the allauth library which has already been installed in this project but only needs to be setup to make this functional
+- The ability for a user to login their account via social media sign in.
+- The ability for the store owner to add, edit and delete blog entries without having to access the admin.
+
 ## Web Marketing
 
 ## Testing
 
+A full detailed breakdown of all testing strategies and code validation techniques is documented in a separate file called TESTING.md.
+
 ## Technologies Used
+### Languages & Frameworks
+
+The follow programming languages & frameworks were used in the development of this project:
+- Python:
+    - The following python packages were installed and used for this project:
+    ![python requirements.txt file](/readme/screenshots/python-libraries.png)
+- Django:
+    - Django was used as the primary Python framework for this project.
+    - Django's authentication library; allauth, was used to implement user account authentication.
+- Heroku:
+    - Heroku is the cloud based platform used to deploy this website and make it public.
+- Heroku PostgreSQL:
+    - Heroku PostgreSQL was used as the database choice for this project during development.
+- JavaScript & JQuery:
+    - Vanilla JS & JQuery code was added to implement the stripe elements in payment forms, edit the country field in forms, displaying toasts across the website and handling payment forms.
+- Bootstrap & Bootswatch 4.6.0:
+    - Bootstrap framework and Bootswatch theme was used to implement the navbar, footer and structure the general content across the project.
+- Font Awesome 5.15.4:
+    - Font Awesome icons were used in different sections of the project where appropriate.
+- CSS:
+    - Custom CSS was written to implement my own styling into the project. It was also used to add media queries to provide responsive across different viewport sizes.
+- Jinja/Django Templating:
+    - Jinja templating was used to insert information from the database into the website. This includes transferring the logic from the app models.py & views.py to the template HTML pages.
+- HTML:
+    - HTML was the base language used to code the templates for the project.
+
+### Packages Used
+
+The following packages were used during development of my project:
+
+- GitPod - IDE used for the development of the project.
+- VS Code - IDE used for the development of the project.
+- Git - Used for version control and transferring files from VS Code to the repository.
+- GitHub - Used to create repository to store files for this project.
+
+### Resources
+
+The following resources were used during development of my project:
+
+- Balsamiq Wireframes - Used to design the wireframes for the website
+- DrawSQL.app - Used to sketch entity relationship diagram.
+- Amazon Web Services S3 Bucket - Used for hosting project media images and static files.
+- Summernote - Library used to create the WYSIWYG form editor.
+- Django AllAuth - Used to implement authentication of users to website.
+- StackOverflow - Very helpful reference to research specific content.
+- Stripe - Used to implement payment in the website and test webhooks on endpoint URL's frequently.
+- Mailchimp - Used to implement email newsletter sign up form.
+- Facebook Pages - Used to create The Halal Butcher Facebook page.
 
 ## Deployment
 
+The Halal Butcher was deployed via Heroku. The deployed website can be found here - [The Halal Butcher](https://halal-butcher.herokuapp.com/).
+
 ## Credits
+All references that assisted me in developing The Halal Butcher have been mentioned throughout the README file. However I would like to thank:
+
+- Richard Wells - The coding extraordinaire who is my project mentor. Richard was a huge help when developing this project.
+- The Slack community - Reviewing my project and observing if any changes needed making.
+- Code Institute tutors - Assisted with fixing my Stripe webhooks.
