@@ -592,6 +592,10 @@ There are several improvements to functionality that I would like to implement i
 
 ## Web Marketing
 
+As part of the Code Insitute assesment criteria, a Facebook page was created to promote the company. Facebook is used by many around the globe and is a key marketing strategy to be successful e-commerce business. The Facebook page includes a CTA button which drives traffic away from social media and to the website. A screenshot of the Facebook webpage is shown below: 
+
+![The Halal Butcher Facebook page](/readme/screenshots/facebook-page-ss.png)
+
 ## Testing
 
 A full detailed breakdown of all testing strategies and code validation techniques is documented in a separate file called TESTING.md.
