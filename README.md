@@ -598,7 +598,7 @@ As part of the Code Insitute assesment criteria, a Facebook page was created to 
 
 ## Testing
 
-A full detailed breakdown of all testing strategies and code validation techniques is documented in a separate file called TESTING.md.
+A full detailed breakdown of all testing strategies and code validation techniques is documented in a separate file called [TESTING.md](https://github.com/legenduzair/the-halal-butcher/blob/main/testing.md)
 
 ## Technologies Used
 ### Languages & Frameworks
@@ -653,6 +653,169 @@ The following resources were used during development of my project:
 ## Deployment
 
 The Halal Butcher was deployed via Heroku. The deployed website can be found here - [The Halal Butcher](https://halal-butcher.herokuapp.com/).
+
+### Installing Django & Supporting Libraries
+
+Before initiating development, I had to install Django and its supporting libraries on GitPod.
+
+In GitPod's Terminal:
+  1. Install Django & Gunicorn:
+    - pip3 install 'django<4' gunicorn
+  2. Install database:
+    - pip3 install dj_database_url psycopg2
+  3. Install Python Libraries:
+    - Install django-crispy-forms, django-summernote, Stripe, Pillow, Django-allauth, Django-countries,
+  4. Create requirements file:
+    - pip3 freeze --local > requirements.txt
+  5. Create project (in this case, halal_butcher):
+    - django-admin startproject halal_butcher .
+  6. Create first app (in this case, home):
+    - python3 manage.py startapp home
+    - The other apps were created at a later stage during development.
+In settings.py:
+  7. Add to installed apps section. 
+In Gitpod's Terminal:
+  8. Migrate changes:
+    - python3 manage.py migrate
+  9. Run the server to test:
+    - python3 manage.py runserver
+
+### Creating Heroku App
+
+The following steps can only be performed if an account is made on [Heroku](https://id.heroku.com/login).
+
+  1. Create new Heroku app:
+    - From the Heroku dashboard, select "New" and then select "Create New App".
+  2. Name your Heroku app and select the region:
+    - Give the project a unique name (in my case, the-halal-butcher).
+    - Select the region (in my case, Europe).
+  3. Add database to the Heroku app:
+    - Navigate to the "Resources" tab and in the add-ons section, search for "Heroku Postgres" and select it.
+    - Select "Hobby Dev - Free" from the "plan name" drop-down menu and click "Submit Order Form."
+  4. Acquire database URL:
+    - Navigate to the "Settings" tab and select "Reveal Config Vars". Copy the "DATABASE_URL" for use in the upcoming steps.
+
+### Attaching the Database
+
+  1. Within the Django app repository, create a new file called "env.py".
+  2. In the "env.py" file, import the os library:
+    - Add "import os"
+  3. Set environment variables:
+    - Add 'os.environ["DATABASE_URL"] = "(Paste the DATABASE_URL key from Heroku"'
+  4. Add in a custom secret key:
+    - Add 'os.environ["SECRET_KEY"] = "(Make up your own key)"'
+In Heroku.com:
+  5. Add secret key to config vars:
+    - Add the secret key that has just been created as SECRET_KEY for the KEY and the secret key value as the VALUE.
+
+### Preparing our environment and settings.py file
+
+  1. At the top of the settings.py file, add the following snippet:
+
+    from pathlib import Path
+    import os
+    import dj_database_url
+    if os.path.isfile('env.py'):  
+      import env
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+  
+  2. Comment out the old Databases section:
+    
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+  
+  3. Add new Databases section:
+
+    DATABASES = {
+      'default':
+    dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+
+  4. In the terminal, make migrations migrate all changes:
+    - python3 manage.py makemigrations
+    - python3 manage.py migrate
+
+### Preparing AWS Bucket & Static/Media files
+  
+  1. Navigate to AWS in the browser and log in or make an account.
+  2. Naviagte to S3 in services.
+  3. Create a new S3 bucket for the site and create a static directory and media directory within the bucket.
+  4. After configuring the S3 bucket, copy the details over to your settings.py file.
+    - You will require the Storage Bucket Name, Storage Bucket Region Name, Access Key ID & Secret Access Key.
+  5. Configure the above in your settings.py file.
+  6. In your env.py file created earlier, add the following:
+     
+     os.environ["AWS_ACCESS_KEY_ID"] = "paste in your access key"
+     os.environ["AWS_SECRET_ACCESS_KEY"] = "paste in your secret access key"
+  7. In Heroku, add these keys to the config vars.
+  8. Add the key, DISABLE_COLLECTSTATIC with the value of 1 to the Heroku config vars, remembering to remove this before final deployment.
+  9. Add the STATIC files settings in settings.py by configuring url, storage path, directory path, root path, media url and default file storage path variables.
+  10. Link files to the Templates directory inserting the snippet below (Place under the BASE_DIR line):
+
+    TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+  11. Change the templates directory to TEMPLATES_DIR (Place within the TEMPLATES array):
+
+          TEMPLATES = [
+          {
+            …,
+            'DIRS': [TEMPLATES_DIR],
+            …,
+              ],
+            },
+          },
+          ]
+
+   12. Add Heroku Hostname to ALLOWED_HOSTS array:
+    - ALLOWED_HOSTS = ['halal-butcher.herokuapp.com', 'localhost'] (in my case).
+
+### Setting Up Media & Static Files
+
+  In GitPod:
+  1. Create three new folders at top level directory:
+    - These folders are 'media', 'static' and 'templates'.
+  2. Create a PROCFILE at top level directory:
+    - Procfile
+  In Procfile:
+  3. Add this code:
+    - web: gunicorn PROJ_NAME.wsgi
+  4. Save all files.
+  In the terminal:
+  5. Add, Commit and Push:
+    - git add .
+    - git commit -m “Deployment Commit”
+    - git push
+
+In Heroku, navigate to the deployment tab and deploy the branch manually - watch the build logs for any errors. Heroku will now build the app. Once the build is finished, the live site will be deployed with a Heroku link provided and a success message.
+
+### Stripe Setup
+
+This project uses Stripe to handle payments. You will need a developer account to gain access to the different API keys that will then be inputted into the env.py file and Heroku config vars. These keys include STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY & STRIPE_WH_SECRET. Configure these keys according to how Django requires as guided in their Stripe documentation. 
+
+### Local Deployment
+
+If you want to clone this repository to make a copy that runs the project on a local machine, this can be achieved by following the steps below:
+
+  1. Navigate to the repository you want to clone: https://github.com/legenduzair/the-halal-butcher
+  2. Select the "Code" button that is next to the green "GitPod" button. A menu should dropdown.
+  3. On the dropdown menu, select "HTTPS" and copy the URL it provides to the clipboard.
+  4. On the code editor you are using, in the terminal change the directory to the location you want to clone the respository to.
+  5. Run the command "git clone" and paste in the URL you copied from the clipboard earlier.
+  6. Select enter and Git will clone the repository to your local machine.
+
+After cloning the repository, it is important to create a virtual environment before installing any python libraries to the project to start working with it. It allows your device and projects to be secure. To do this, please follow the steps below:
+
+  1. After cloning the repository in the terminal, create a virtual environment by running the command: "python3 -m venv venv" .
+  2. Once complete, add the "venv" file to your ".gitignore" file. Then, run the command "venv\Scripts\activate.bat" in the terminal to install it. 
+
+After this, you can install all the Python libraries needed to run this project by installing the "requirements.txt" file.
+
+  1. In the terminal, run the command pip3 install -r requirements.txt to add the Python libraries to this project. I did not need to do this as my project was developed from scratch. This means that I installed the libraries myself and added them to the "requirements.txt" file by running the command "pip3 freeze > requirements.txt" to generate it.
+
+After this, you can create your own Heroku application, create the environmental variables and update the settings.py file as mentioned [above](https://github.com/legenduzair/the-halal-butcher#creating-heroku-app). Finally, run the server in the terminal by entering python3 manage.py runserver .
 
 ## Credits
 All references that assisted me in developing The Halal Butcher have been mentioned throughout the README file. However I would like to thank:
