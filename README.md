@@ -582,6 +582,13 @@ All images used for developing the website were acquired from [Pexels](https://w
 
 ## Features
 
+### Navigation Header
+
+The main navigation bar is located at the top of the webpage and has different functionalities. It contains the main company title to the left, a product search bar in the center and the wishlist, trolley & user profile icons to the right. When clicked on, the user profile icon branches into more links. These include authentication links (register, login & logout), my profile, my wishlist and product management (if admin is logged in).
+
+### Footer
+
+### Home Page
 ## Future Improvements
 
 There are several improvements to functionality that I would like to implement in the future. Some of these improvements have been gathered from the user stories on the project Kanban board [here](https://github.com/legenduzair/the-halal-butcher/projects/2). These user stories have not been completed and would be implemented as future enhancement opportunities. These include:
