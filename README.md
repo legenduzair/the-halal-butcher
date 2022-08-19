@@ -669,6 +669,7 @@ There are several improvements to functionality that I would like to implement i
 - The ability to recover a user's password if it has been stolen/forgotten/corrupted. This functionality is part of the allauth library which has already been installed in this project but only needs to be setup to make this functional
 - The ability for a user to login their account via social media sign in.
 - The ability for the store owner to add, edit and delete blog entries without having to access the admin.
+- The functionality to add a product to the basket straight from a user's wishlist.
 
 ## Web Marketing
 
