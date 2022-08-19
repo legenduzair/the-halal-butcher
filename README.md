@@ -584,11 +584,84 @@ All images used for developing the website were acquired from [Pexels](https://w
 
 ### Navigation Header
 
-The main navigation bar is located at the top of the webpage and has different functionalities. It contains the main company title to the left, a product search bar in the center and the wishlist, trolley & user profile icons to the right. When clicked on, the user profile icon branches into more links. These include authentication links (register, login & logout), my profile, my wishlist and product management (if admin is logged in).
+The main navigation bar is located at the top of the webpage and has different functionalities. It contains the main company title to the left, a product search bar in the center and the wishlist, trolley & user profile icons to the right. When clicked on, the user profile icon branches into more links. These include authentication links (register, login & logout), my profile, my wishlist and product management (if admin is logged in). Below the product search bar, there are individual navigation links that allow the user to browse through the products via different filters and also a link to the website's blog. On smaller viewports, a hamburger menu is present to keep the look of the navbar refined and clean.
+
+![screenshot of navbar on desktop](/readme/screenshots/navbar-desktop-ss.png)
+
+![screenshot of navbar on mobile](/readme/screenshots/navbar-mobile-ss.png)
 
 ### Footer
 
+The footer contains navigation links to different pages of the website to allow users to gain easy access. These links include different categories of meat products, the blog, shopping basket, wishlist, profile and The Halal Butchers' Facebook page for users to check out. The footer also contains social media links and copyright information for the company.
+
+![screenshot of footer](/readme/screenshots/footer-desktop-ss.png)
+
 ### Home Page
+
+The Home Page of the website is segregrated into different sections. This includes; a CTA (Call to Action) that allows the users to easily access the list of meat products to browse through. A main banner of a product that represents the company and its market which is present to be appealing to user. A section that contains information on the order process to assist with user accessibility. A section that contains the most popular products recommended by the store owner. An 'About Us' segment that details information about the company and its morals. Finally, a mailchimp powered email newsletter form that allows users to input their email address to subscribe to The Halal Butcher.
+
+![screenshot of home page](/readme/screenshots/home-page-ss.png)
+
+### Products List
+
+The products list page displays the summary of each product in a card container; an image, product name, category, price and rating. Each product card can be clicked on to view the product in detail on another page. Products can also be filtered via different categories; by rating and by price (ascending & descending).
+
+![screenshot of products page](/readme/screenshots/products-ss.png)
+
+### Product Detail
+
+The product detail page displays full information of the product including; product title, price, category, rating and product information. Users can add the product to their wishlist and also add the specified quantity of the product to their basket for checkout. Registered users can leave a review below products to share their opinions with other users.
+
+![screenshot of product detail page](/readme/screenshots/product-detail-ss.png)
+
+### Add to Basket
+
+One of the main features of The Halal Butcher that distinguishes it as an e-commerce store is the add to basket feature. Users can add a specified quantity of products to their basket for purchase. A success message is displayed on the screen when products are added. 
+
+![screenshot of add to basket toast](/readme/screenshots/add-to-basket-ss.png)
+
+### Basket Page 
+
+Once the user is happy with their selection, they can advance to the shopping basket page to confirm the product selections, quantity and prices. Users can also add or remove products whilst on this page to update the quantity before checkout. 
+
+![screenshot of basket page](/readme/screenshots/basket-ss.png)
+
+### Checkout Page
+
+When the user is ready to proceed to the checkout page after selecting their choice of products. Here, the user is required to fill out personal information; First name, surname, email address, phone number, street address, town/city, county, postal code and country. The user is also required to fill out payment information which in this project is powered by Stripe; long card number. expiry date and CVC. As Stripe is not fully activated in this project, only test payment details can be used to process payments. Users also have the option to save their personal information to their profile so future checkouts are easier instead of having to fill out the form repeatedly. Finally before proceeding with the payment, the order summary is displayed next to the order form so that it is clear to the user the selection of products they are ordering.
+
+![screenshot of checkout page](/readme/screenshots/checkout-ss.png)
+
+### Order Confirmation Page
+
+After users have placed their order, an order confirmation page is displayed with the summary of the order placed including; product details, personal information, order number and the email that is used to send the order confirmation to.
+
+![screenshot of order confirmation page](/readme/screenshots/order-confirm-ss.png)
+
+An order confirmation is also sent to the users email address.
+
+![screenshot of order confirmation email](/readme/screenshots/order-confirm-email-ss.png)
+
+### User Profile Page
+
+Registered users have an option to view their profile that lists their saved personal information which can be used for future checkouts and also a history of the orders they have placed with their respective order numbers. These order numbers can be hovered over and clicked on so that users can view the full order details.
+
+![screenshot of user profile](/readme/screenshots/profile-ss.png)
+
+### Wishlist Page
+
+Registered users have an option to view their wishlist and the products that been added to it. The wishlist feature is convenient as it does not expire, even after the user signs out. So, if the user wants to wait a longer period of time to purchase a product, they can keep it stored in their wishlist. Users also have an option to remove any product from their wishlist if no longer required.
+
+![screenshot of wishlist](/readme/screenshots/wishlist-ss.png)
+
+### Blogs Page
+
+The Halal Butcher also contains a blog called 'The Meat Blog' that contains the latest information on the company for users to remain updated. These blog articles have been written by the company and can be selected to read in detail.
+
+![screenshot of blog list](/readme/screenshots/blog-list-ss.png)
+
+![screenshot of blog detail](/readme/screenshots/blog-detail-ss.png)
+
 ## Future Improvements
 
 There are several improvements to functionality that I would like to implement in the future. Some of these improvements have been gathered from the user stories on the project Kanban board [here](https://github.com/legenduzair/the-halal-butcher/projects/2). These user stories have not been completed and would be implemented as future enhancement opportunities. These include:
