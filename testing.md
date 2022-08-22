@@ -465,8 +465,15 @@ All user stories and their respective acceptance criterias were tested during an
 All Python code developed in this project was validated using [PEP8 Online Check](http://pep8online.com/). Screenshots of all validation reports are listed below:
 
 - Basket Folder:
-    - 
-
+    - [contents.py](/readme/testing/pep8-contexts.py.png)
+    - [urls.py](/readme/testing/pep8-urls.py.png)
+    - [views.py](/readme/testing/pep8-views.py.png)
+    - [bag_tools.py](/readme/testing/pep8-bag_tools.py.png)
+- Blog Folder:
+    - [admin.py](/readme/testing/pep8-blog-admin.py.png)
+    - [models.py](/readme/testing/pep8-blog-models.py.png)
+    - [urls.py](/readme/testing/pep8-blog-urls.py.png)
+    - [views.py](/readme/testing/pep8-blog-views.py.png)
 ### HTML Validation
 
 To validate the templates written in HTML for this project, I had to copy the code rendered on Google Chrome's page source option and paste it into the validator. This is because Django templates contain Jinja syntax in them which means it is not possible to directly copy the code from the templates. Any following screenshots are of HTML templates validated via [Nu HTML Checker](https://validator.w3.org/nu/), which contained any errors/warnings. 
