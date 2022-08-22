@@ -483,6 +483,10 @@ All Python code developed in this project was validated using [PEP8 Online Check
     - [views.py](/readme/testing/pep8-checkout-views.py.png)
     - [webhook_handler.py](/readme/testing/pep8-checkout-webhookhandler.py.png)
     - [webhooks.py](/readme/testing/pep8-checkout-webhooks.py.png)
+- Halal Butcher Folder:
+    - [settings.py](/readme/testing/pep8-halal_butcher-settings.py.png)
+    - [urls.py](/readme/testing/pep8-halal_butcher-urls.py.png)
+    - [views.py](/readme/testing/pep8-halal_butcher-views.py.png)
 ### HTML Validation
 
 To validate the templates written in HTML for this project, I had to copy the code rendered on Google Chrome's page source option and paste it into the validator. This is because Django templates contain Jinja syntax in them which means it is not possible to directly copy the code from the templates. Any following screenshots are of HTML templates validated via [Nu HTML Checker](https://validator.w3.org/nu/), which contained any errors/warnings. 
