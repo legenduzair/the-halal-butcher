@@ -462,6 +462,7 @@ All user stories and their respective acceptance criterias were tested during an
 
 ### Python Validation 
 
+
 ### HTML Validation
 
 To validate the templates written in HTML for this project, I had to copy the code rendered on Google Chrome's page source option and paste it into the validator. This is because Django templates contain Jinja syntax in them which means it is not possible to directly copy the code from the templates. Any following screenshots are of HTML templates validated via [Nu HTML Checker](https://validator.w3.org/nu/), which contained any errors/warnings. 
@@ -473,9 +474,19 @@ When passing all HTML templates through NU HTML Checker, they all return with th
 When running the basket HTML template through NU HTML Checker, they return with few duplicate errors. These are linked to the quantity input buttons that are present within the template. However this has been left in the code due to the functionality of the quantity input buttons operating correctly as usual. This has been noted within the [Unfixed Bugs](https://github.com/legenduzair/the-halal-butcher/blob/main/testing.md#unfixed-bugs) section. 
 
 ![screenshot of HTML validation errors](/readme/testing/html-validation-two.png)
+
+When running the product detail (with product reviews) template through the Nu HTML Checker, it returns with a few duplicate errors. This is due to two modals being present within the template, one for adding a review and one for editing a review. This was a design and code choice, thus has been left in the code as the functionality works as normal. However, it has been noted in the [Unfixed Bugs](https://github.com/legenduzair/the-halal-butcher/blob/main/testing.md#unfixed-bugs) section.
+
+![screenshot of HTML Validation errors - two](/readme/testing/html-validation-four.png)
+
 ### CSS Validation
 
+All custom CSS stylesheets were validated using [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/). The report returned with no errors.
+
+![screenshot of CSS validation error](/readme/testing/css-validation.png)
 ### JavaScript Validation
+
+All JavaScript files were validated using [JS Hint](https://jshint.com/). All reports returned with no errors.
 
 ## Accessibility Testing
 
