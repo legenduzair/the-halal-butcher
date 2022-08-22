@@ -38,7 +38,7 @@ def product_list(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter any search criteria")
                 return redirect(reverse('products'))
 
             queries = (Q(name__icontains=query) |
@@ -96,7 +96,7 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-   
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -125,13 +125,13 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-  
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
-    if request.method == 'POST':    
+    if request.method == 'POST':
         product.delete()
         messages.success(request, 'Product deleted successfully')
         return redirect(reverse('products'))
@@ -187,7 +187,7 @@ def edit_review(request, review_id):
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
-            messages.info(request, 'Your review has been updated successfully!')
+            messages.info(request, 'Your review has been updated successfully')
             return redirect(reverse('product_detail',
                             args=[product.id]))
         else:
@@ -209,7 +209,7 @@ def edit_review(request, review_id):
 
 
 def delete_review(request, review_id):
-    
+
     review = get_object_or_404(ProductReview, pk=review_id)
     product = review.product
     review.delete()

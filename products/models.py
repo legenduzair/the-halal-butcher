@@ -8,7 +8,7 @@ class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'Categories'
-        
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -51,7 +51,10 @@ class ProductReview(models.Model):
     )
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
+    product = models.ForeignKey(
+        Product,
+        related_name='reviews',
+        on_delete=models.CASCADE)
     content = models.CharField(max_length=400)
     rating = models.CharField(max_length=100, choices=RATING)
     published = models.DateField(auto_now_add=True)
