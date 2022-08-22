@@ -6,7 +6,7 @@ During and after the development of The Halal Butcher, the project went through 
 
 ### User Stories
 
-All user stories and their respective acceptance criterias were tested during and after development of this project. It is important to achieve these criterias as it is from a users perspective when navigating & using the website. Below is a summary of the results acquired. The user stories & acceptance criterias that have not been achieved/completed have already been documented in the [Future Improvements](https://github.com/legenduzair/the-halal-butcher#future-improvements) section.
+All user stories and their respective acceptance criterias were tested during and after development of this project. It is important to achieve these criterias as they have been written from a users perspective when operating the website. Below is a summary of the results acquired. The user stories & acceptance criterias that have not been achieved/completed have also been documented in the [Future Improvements](https://github.com/legenduzair/the-halal-butcher#future-improvements) section.
 
 <details>
     <summary>User Story #14 - As a Developer, I can setup Django by installing the appropriate libraries, creating the admin superuser and create my first app so that I can initiate development.</summary>
@@ -464,8 +464,15 @@ All user stories and their respective acceptance criterias were tested during an
 
 ### HTML Validation
 
-To validate the templates written in HTML for this project, I had to copy the code rendered on Google Chrome's page source option and paste it into the validator. This is because Django templates contain Jinja syntax in them which means it is not possible to directly copy the code from the templates. Any following screenshots are of HTML templates validated via [Nu HTML Checker](https://validator.w3.org/nu/), which contained any errors/warnings.
+To validate the templates written in HTML for this project, I had to copy the code rendered on Google Chrome's page source option and paste it into the validator. This is because Django templates contain Jinja syntax in them which means it is not possible to directly copy the code from the templates. Any following screenshots are of HTML templates validated via [Nu HTML Checker](https://validator.w3.org/nu/), which contained any errors/warnings. 
 
+![screenshot of HTML validation warnings](/readme/testing/html-validation.png)
+
+When passing all HTML templates through NU HTML Checker, they all return with the same warnings. These warnings are shown in the above screenshot. The most abundant warning that appeared is related to the script tags containing an optional type attribute that are present in the base template. The other warning is related to specific sections in the footer and home template not containing headings (h2-h6). These warnings do not affect the functionality of the code and the choice of syntax fits the design I am trying to implement within the project.
+
+When running the basket HTML template through NU HTML Checker, they return with few duplicate errors. These are linked to the quantity input buttons that are present within the template. However this has been left in the code due to the functionality of the quantity input buttons operating correctly as usual. This has been noted within the [Unfixed Bugs](https://github.com/legenduzair/the-halal-butcher/blob/main/testing.md#unfixed-bugs) section. 
+
+![screenshot of HTML validation errors](/readme/testing/html-validation-two.png)
 ### CSS Validation
 
 ### JavaScript Validation
