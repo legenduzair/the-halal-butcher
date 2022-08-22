@@ -460,6 +460,23 @@ All user stories and their respective acceptance criterias were tested during an
 
 ## Validation Testing
 
+### Python Validation 
+
 ### HTML Validation
 
 To validate the templates written in HTML for this project, I had to copy the code rendered on Google Chrome's page source option and paste it into the validator. This is because Django templates contain Jinja syntax in them which means it is not possible to directly copy the code from the templates. Any following screenshots are of HTML templates validated via [Nu HTML Checker](https://validator.w3.org/nu/), which contained any errors/warnings.
+
+### CSS Validation
+
+### JavaScript Validation
+
+## Accessibility Testing
+
+### Lighthouse Evaluation
+
+## Bugs and Fixes
+
+### Fixed Bugs
+
+### Unfixed Bugs
+
