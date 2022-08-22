@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, reverse
+from django.shortcuts import get_object_or_404, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 from django.contrib import messages
@@ -87,7 +88,7 @@ def checkout(request):
     else:
         basket = request.session.get('basket', {})
         if not basket:
-            messages.error(request, 'There are no items in your basket at the moment.')
+            messages.error(request, 'There are no items in your basket.')
             return redirect(reverse('products'))
 
         current_basket = basket_contents(request)
@@ -119,7 +120,7 @@ def checkout(request):
             order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stipe public key is missing, set in env variables')
+        messages.warning(request, 'Stipe public key is missing')
 
     template = 'checkout.html'
     context = {
@@ -163,7 +164,7 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}')
-    
+
     if 'basket' in request.session:
         del request.session['basket']
 
@@ -172,4 +173,3 @@ def checkout_success(request, order_number):
         'order': order,
     }
     return render(request, template, context)
-

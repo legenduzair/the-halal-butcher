@@ -15,7 +15,7 @@ class StripeWH_Handler:
 
     def __init__(self, request):
         self.request = request
-    
+
     def _send_confirmation_email(self, order):
 
         cust_email = order.email
@@ -33,11 +33,11 @@ class StripeWH_Handler:
         )
 
     def handle_event(self, event):
-     
+
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
-    
+
     def handle_payment_intent_succeeded(self, event):
 
         intent = event.data.object
@@ -52,7 +52,7 @@ class StripeWH_Handler:
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
-        
+
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
@@ -68,7 +68,6 @@ class StripeWH_Handler:
                 profile.county = shipping_details.address.state
                 profile.email_address = billing_details.email
                 profile.save()
-
 
         order_exists = False
         attempt = 1
@@ -136,9 +135,9 @@ class StripeWH_Handler:
             content=f'Webhook received: {event["type"]} |\
                       SUCCESS: Created order in webhook',
             status=200)
-    
+
     def handle_pmt_intent_pmt_failed(self, event):
-    
+
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)

@@ -474,6 +474,15 @@ All Python code developed in this project was validated using [PEP8 Online Check
     - [models.py](/readme/testing/pep8-blog-models.py.png)
     - [urls.py](/readme/testing/pep8-blog-urls.py.png)
     - [views.py](/readme/testing/pep8-blog-views.py.png)
+- Checkout Folder:
+    - [admin.py](/readme/testing/pep8-checkout-admin.py.png)
+    - [forms.py](/readme/testing/pep8-checkout-forms.py.png)
+    - [models.py](/readme/testing/pep8-checkout-models.py.png)
+    - [signals.py](/readme/testing/pep8-checkout-signals.py.png)
+    - [urls.py](/readme/testing/pep8-checkout-urls.py.png)
+    - [views.py](/readme/testing/pep8-checkout-views.py.png)
+    - [webhook_handler.py](/readme/testing/pep8-checkout-webhookhandler.py.png)
+    - [webhooks.py](/readme/testing/pep8-checkout-webhooks.py.png)
 ### HTML Validation
 
 To validate the templates written in HTML for this project, I had to copy the code rendered on Google Chrome's page source option and paste it into the validator. This is because Django templates contain Jinja syntax in them which means it is not possible to directly copy the code from the templates. Any following screenshots are of HTML templates validated via [Nu HTML Checker](https://validator.w3.org/nu/), which contained any errors/warnings. 
