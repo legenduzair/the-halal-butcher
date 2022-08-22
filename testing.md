@@ -462,6 +462,10 @@ All user stories and their respective acceptance criterias were tested during an
 
 ### Python Validation 
 
+All Python code developed in this project was validated using [PEP8 Online Check](http://pep8online.com/). Screenshots of all validation reports are listed below:
+
+- Basket Folder:
+    - 
 
 ### HTML Validation
 

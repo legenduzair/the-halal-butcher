@@ -1,3 +1,4 @@
+""" System Module """
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
@@ -5,6 +6,9 @@ from products.models import Product
 
 
 def basket_contents(request):
+
+    """ Context processor to make basket contents available
+    across all templates"""
 
     basket_items = []
     total = 0
@@ -27,7 +31,7 @@ def basket_contents(request):
     else:
         delivery = 0
         free_delivery__delta = 0
-    
+
     grand_total = delivery + total
 
     context = {
