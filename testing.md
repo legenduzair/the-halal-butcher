@@ -532,6 +532,16 @@ All JavaScript files were validated using [JS Hint](https://jshint.com/). All re
 ## Accessibility Testing
 ### Lighthouse Evaluation
 
+Google's Lighthouse feature was used as a means for testing the performance and accessibility of the project. Both desktop and mobile lighthouse reports are shown below:
+
+- Desktop:
+![screenshot of desktop lighthouse report](/readme/testing/lighthouse-desktop.png)
+
+- Mobile:
+![screenshot of mobile lighthouse report](/readme/testing/lighthouse-mobile.png)
+
+Evaluating both desktop and mobile Lighthouse reports, the performance score has taken a hit. This is due to the speed of internet connection at the time of testing. The performance is also decreased due to the size of the images and their load times on the web pages. When the lighthouse report had been tested repeatedly on another desktop device, the score was higher.
+
 ## Bugs and Fixes
 ### Fixed Bugs
 
