@@ -16,5 +16,13 @@ class Wishlist(models.Model):
 
 class WishlistProduct(models.Model):
 
-    products = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
-    wishlist = models.ForeignKey(Wishlist, null=False, blank=False, on_delete=models.CASCADE)
+    products = models.ForeignKey(
+        Product,
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE)
+    wishlist = models.ForeignKey(
+        Wishlist,
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE)

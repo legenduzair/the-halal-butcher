@@ -22,7 +22,7 @@ def profile(request):
                 Please ensure the form is correct')
     else:
         form = ProfileForm(instance=profile)
-    
+
     orders = profile.orders.all()
     template = 'profiles.html'
     context = {

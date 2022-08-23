@@ -40,7 +40,7 @@ def add_to_wishlist(request, item_id):
 
 @login_required
 def remove_from_wishlist(request, item_id):
- 
+
     wish = Wishlist.objects.get(user=request.user)
     product = get_object_or_404(Product, pk=item_id)
 
