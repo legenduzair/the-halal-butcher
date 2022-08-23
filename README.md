@@ -10,6 +10,20 @@ This website application includes CRUD functionality, user authentication (using
 
 ## Table of Contents
 
+- [UX & Planning](https://github.com/legenduzair/the-halal-butcher#ux--planning)
+    - [The Strategy Plane](https://github.com/legenduzair/the-halal-butcher#the-strategy-plane)
+    - [The Scope Plane](https://github.com/legenduzair/the-halal-butcher#the-scope-plane)
+    - [The Structure Plane](https://github.com/legenduzair/the-halal-butcher#the-structure-plane)
+    - [The Skeleton Plane](https://github.com/legenduzair/the-halal-butcher#the-skeleton-plane)
+    - [The Surface Plane](https://github.com/legenduzair/the-halal-butcher#the-surface-plane)
+- [Features](https://github.com/legenduzair/the-halal-butcher#features)
+- [Future Improvements](https://github.com/legenduzair/the-halal-butcher#future-improvements)
+- [Web Marketing](https://github.com/legenduzair/the-halal-butcher#web-marketing)
+- [Testing](https://github.com/legenduzair/the-halal-butcher#testing)
+- [Technologies Used](https://github.com/legenduzair/the-halal-butcher#technologies-used)
+- [Deployment](https://github.com/legenduzair/the-halal-butcher#deployment)
+- [Credits](https://github.com/legenduzair/the-halal-butcher#credits)
+
 ## UX & Planning
 
 ### The Strategy Plane
