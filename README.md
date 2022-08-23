@@ -6,6 +6,8 @@ The Halal Butcher is a full-stack Django website built using Python, JavaScript,
 
 This website application includes CRUD functionality, user authentication (using Django's allauth library), email validation and database interaction.
 
+![screenshot of website on all viewport sizes](/readme/screenshots/responsive-ss.png)
+
 [View the live website on Heroku](https://halal-butcher.herokuapp.com/)
 
 ## Table of Contents
