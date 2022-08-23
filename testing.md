@@ -3,7 +3,6 @@
 During and after the development of The Halal Butcher, the project went through rigorous testing to ensure a fully functional and responsive website was created. I have documented all the testing techniques used in the following sections. If you would like to traverse back to the README file, please click here - [README](https://github.com/legenduzair/the-halal-butcher/blob/main/README.md)
 
 ## Manual Testing
-
 ### User Stories
 
 All user stories and their respective acceptance criterias were tested during and after development of this project. It is important to achieve these criterias as they have been written from a users perspective when operating the website. Below is a summary of the results acquired. The user stories & acceptance criterias that have not been achieved/completed have also been documented in the [Future Improvements](https://github.com/legenduzair/the-halal-butcher#future-improvements) section.
@@ -459,7 +458,6 @@ All user stories and their respective acceptance criterias were tested during an
 <br>
 
 ## Validation Testing
-
 ### Python Validation 
 
 All Python code developed in this project was validated using [PEP8 Online Check](http://pep8online.com/). Screenshots of all validation reports are listed below:
@@ -532,12 +530,22 @@ All custom CSS stylesheets were validated using [The W3C CSS Validation Service]
 All JavaScript files were validated using [JS Hint](https://jshint.com/). All reports returned with no errors.
 
 ## Accessibility Testing
-
 ### Lighthouse Evaluation
 
 ## Bugs and Fixes
-
 ### Fixed Bugs
+
+The following section consists of many bugs that were encountered and fixed during the development of this project.
+
+- Bug No 1:
+    - Issue:
+    - Cause:
+    - Fix:
 
 ### Unfixed Bugs
 
+There are a couple of bugs that have not been fixed that are documented below:
+
+- When running the basket HTML template through HTML Validation, it returned with errors that stated that the ID's within the code are duplicated. This occurs when multiple products are in the basket. As each product contains a quantity input bar, it will result in duplicate IDs within the code. This has not been fixed and has been left in the code due to time restraints. It is important to mention that this does not affect the functionality of the website in any way.
+
+- When running the product detail template (with product reviews) through HTML Validation, it returned with errors that stated that the ID's within the modal codes were duplicated. This is due to the template containing two modals; one for adding a review and one for editing a review. This has not been fixed and has been left in the code due to time restraints. It is important to mention that this does not affect the functionality of the website in any way.
