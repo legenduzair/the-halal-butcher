@@ -548,9 +548,49 @@ Evaluating both desktop and mobile Lighthouse reports, the performance score has
 The following section consists of many bugs that were encountered and fixed during the development of this project.
 
 - Bug No 1:
-    - Issue:
-    - Cause:
-    - Fix:
+    - Issue: When sending multiple test webhooks to the local development endpoint URL to test Stripe payments, there were multiple that errors that appeared each on different webhook tests. These included; 400 error(bad request), 401 error (unauthorized) and 500 error (internal server error).
+    - Cause: There were multiple causes to these errors. The 400 error was because the local deployment server port was set to private when testing. The 401 error was because of the incorrect API endpoint URL being used on Stripe. The 500 error was due to incorrect fields in the 'stripe_elements' JavaScript file and 'webhook_handler' Python file.
+    - Fix: The 400 error was fixed by changing the port to public before running it. The 401 error was fixed by inputting the correct API endpoint URL on Stripe. Finally, the 500 error was fixed by amending specific fields in the JavaScript & Python files.
+- Bug No 2:
+    - Issue: When accessing the wishlist & profile URL's, an error displayed which stated that 'AnonymousUser object is not iterable'.
+    - Cause: This error was caused due to accessing the URL's without logging into the website.
+    - Fix: To fix this error, I made sure I was authenticated before accessing the URLs to counter the 'AnonymousUser object' error.
+- Bug No 3:
+    - Issue: When accessing the allauth login url (/accounts/login), an error popped up which stated that 'User has no profile'. 
+    - Cause: This was due to the project not recognising a superuser.
+    - Fix: To fix this, a new superuser had to be created.
+- Bug No 4:
+    - Issue: When creating the 'Edit Product' view, an error popped up which stated; "Reverse for 'edit_product' with no arguments not found. 1 pattern(s) tried: ['products/edit/(?P<product_id>[0-9]+)/\\Z']".
+    - Cause: This error was caused due to the edit product form syntax not containing a product ID.
+    - Fix: Within the form syntax, a product ID (product.id) was inserted. This allows the edit product form to access the ID of the product the user is editing.
+- Bug No 5:
+    - Issue: When creating the ratings for the product reviews, I was faced with an error on the review form that stated; "Select a valid choice. 4 is not one of the available choices.".
+    - Cause: This error was due to the incorrect type field present in the product reviews model.
+    - Fix: To fix this, I changed the field of ratings from Integer to CharField.
+- Bug No 6:
+    - Issue: When creating the admin.py file for the blog app, I faced an error that stated "TypeError: 'MediaDefiningClass' object is not iterable".
+    - Cause: This was due to the name of the admin classes being too similar.
+    - Fix: To fix this, I edited the name of the admin class from 'BlogPostAdmin' to 'PostAdmin'.
+- Bug No 7:
+    - Issue: When adding media queries to make my website responsive at smaller screen sizes, I encountered a huge issue where all of the containers on the home page was being pushed to the left of the page.
+    - Cause: This was due to the dimensions of the mailchimp form being abnormal.
+    - Fix: To fix this, I edited the dimensions of the mailchimp form to fit the container it was in, and to also fit on all viewport sizes.
+- Bug No 8:
+    - Issue: When on the profile page, the title would sometimes display as "Welcome to your profile, none."
+    - Cause: This error is caused if a user has not set a display name in their profile.
+    - Fix: I added an if statement within the profile template to state that if a user has set a display name, then display it or else show "Welcome to your profile." ONLY.
+- Bug No 9:
+    - Issue: When processing an order, the confirmation order toast would always display the basket preview.
+    - Cause: This was due to the basket in session not being deleted within the checkout views.
+    - Fix: To fix this, I added the relevant Python code to handle basket session deletion after processing an order.
+- Bug No 10:
+    - Issue: When deploying the project on Heroku, an error popped up within the build logs: "Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects".
+    - Cause: After researching on multiple sources online, I found out that this error is caused due to the current Python version (3.8) not being compatible with that Python library.
+    - Fix: To fix this issue, I uninstalled "backports.zoneinfo==0.2.1" and also removed it from my requirements.txt file.
+- Bug No 11:
+    - Issue: After setting up email authentication, when registering for an account using an email address, it would return with an error that stated SMTPSenderRefused at /accounts/signup/.
+    - Cause: This was due to incorrect variables set up in my env.py file and my config vars.
+    - Fix: To fix this, I made the correction to the variables in both my Heroku config vars and env.py file. (From EMAIL_HOST_PASSWORD to EMAIL_HOST_PASS).
 
 ### Unfixed Bugs
 
