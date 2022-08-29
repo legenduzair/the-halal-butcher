@@ -236,6 +236,10 @@ As this project utilises Django which is a MVT(Model, View & Template) framework
 
 ![screenshot of ERD on DrawSQL](/readme/screenshots/erd.png)
 
+As displayed in the screenshot, many custom models were integrated into this project as well as models based on the boutique ado project. The custom models used were 'BlogPost', 'ProductReview', 'Wishlist' and 'WishlistProduct'. The 'BlogPost' model is part of the blog app and is responsible for handling the fields of each blog post. The 'ProductReview' model was integrated within the product app and is responsible for the insertion of a review on a product detail page. Finally, the 'Wishlist' and 'WishlistProduct' models are part of the wishlist app and are responsible for handling the wishlist section of the website. 
+
+The 'User' model is displayed on the ERD as it contains information for user authentication and is also linked to other models. The 'Product' and 'Category' models are part of the products app and is responsible for handling the fields of each product and category. The 'Product' model has been customised to include an extra field; 'additional_ information', to include extra details for each product. The 'Order' and 'OrderLineItem' models are also based on the boutique ado project and are responsible for handling the checkout process of the website. However the 'Order' models has been customised to include diverse fields; 'first_name', 'last_name' & 'street_address' to fit the project's needs. Finally the profiles app contains the 'Profile' models which has also been customised to include; 'first_name', 'last_name', 'display_name' and 'street_address'. This model handles the fields included in the user's profile page.
+
 #### User Stories - Acceptance Criterias'
 
 As part of the Strategy Plane, I also incorporated Acceptance Criterias' within each User Story, to help plan and structure the development of my project and be more organised about the whole workflow & process.
