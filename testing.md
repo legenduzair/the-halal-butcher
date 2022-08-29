@@ -3,6 +3,24 @@
 During and after the development of The Halal Butcher, the project went through rigorous testing to ensure a fully functional and responsive website was created. I have documented all the testing techniques used in the following sections. If you would like to traverse back to the README file, please click here - [README](https://github.com/legenduzair/the-halal-butcher/blob/main/README.md)
 
 ## Manual Testing
+
+During the development of The Halal Butcher, the project went through rigorous testing to ensure a fully responsive and functional website was created across all screen sizes. To accomplish this, I used Google Chrome's Developer Tools to continuously test the project when applying styling and adjusting HTML code using a live server window. If any errors occurred in the console, these would be seen to immediately to make sure the project would function properly. Many browsers and devices with varied screen sizes were used to test the responsiveness and amend the design of the website to fit all viewports.
+
+To ensure cross-compatibility, I tested the project on four different browsers during and after development:
+
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+- iOS Safari
+
+I also tested the website on different devices. These include:
+
+- iPhone 11 Pro Max
+- iPhone 5/SE
+- Multiple Android phones
+- Macbook Pro 2021 (13")
+- iPad Air & Mini
+
 ### User Stories
 
 All user stories and their respective acceptance criterias were tested during and after development of this project. It is important to achieve these criterias as they have been written from a users perspective when operating the website. Below is a summary of the results acquired. The user stories & acceptance criterias that have not been achieved/completed have also been documented in the [Future Improvements](https://github.com/legenduzair/the-halal-butcher#future-improvements) section.
